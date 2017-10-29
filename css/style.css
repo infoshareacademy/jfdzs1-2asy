@@ -23,24 +23,29 @@ img{
     width: 15%;
 }
 
-ul{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    list-style: none;
-    background-color: #FBE4C1;
+button{
     border-radius: 5px;
-    height: 50px;
-    width: 100px;
-    margin-right: 10px;
-    padding: 0px;
+    background-color: #FBE4C1;
+    border: none;
+    padding: 20px;
+    width: 120px;
+    margin: 5px;
+    cursor: pointer;
 }
 
-ul:hover{
+.button:hover{
     background-color: #e4cca5;
 }
 
-li a{
-    text-decoration: none;
-    color: #070400;
+.button:focus{
+    outline-style: none;
 }
+
+/*ul:hover{*/
+    /*background-color: #e4cca5;*/
+/*}*/
+
+/*li a{*/
+    /*text-decoration: none;*/
+    /*color: #070400;*/
+/*}*/
