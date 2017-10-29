@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 header {
     height: 100vh;
     max-width: 100%;
@@ -46,8 +46,6 @@ button:hover {
     box-shadow: 2px 2px 2px #fbc0aa;
 }
 
-
-
 #signin {
     font-size: 20px;
     padding:20px;
@@ -59,7 +57,7 @@ button:hover {
     border-radius: 5px;
     padding: 10px;
 }
-=======
+
 body header h1 {
     display: block;
 }
@@ -76,5 +74,25 @@ body header h1 {
 .logoButtonMain {
     width: 15%;
     height: 10%;
+}
+
+#functions{
+    display: flex;
+}
+#functions article{
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    background: rgb(255,0,0);
+    border-radius: 20px;
+}
+#functions article img{
+    max-width: 100%;
+}
+#functions article h1{
+    /*text-align: center;*/
+}
+#functions article p {
+    text-align: justify;
 }
 
