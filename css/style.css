@@ -38,3 +38,22 @@ body header h1 {
     width: 15%;
     height: 10%;
 }
+#functions{
+    display: flex;
+}
+#functions article{
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    background: rgb(255,0,0);
+    border-radius: 20px;
+}
+#functions article img{
+    max-width: 100%;
+}
+#functions article h1{
+    /*text-align: center;*/
+}
+#functions article p {
+    text-align: justify;
+}
