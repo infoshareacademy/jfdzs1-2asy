@@ -7,7 +7,20 @@
         <title>GitFilm</title>
     </head>
     <body>
+
         <header>
+<<<<<<< HEAD
+          <div id="nav">
+              <a href=index.html><img src="images/gitfilm_logo.png" alt="Logo" id="logoPic"></a>
+              <nav>
+                <ul>
+                  <li><a href="#">Główna</a></li>
+                  <li><a href="#">Funkcje</a></li>
+                  <li><a href="#">Zespół</a></li>
+                  <li><a href="#">Zapisz się!</a></li>
+                </ul>
+              </nav>
+=======
             <div id="mainPicture"><img class="mainPicture" src="images/mainPic.jpeg" alt="mainPicture"></div>
             <div class="WelcomeSignPicture">
                 <h1 class="welcomeSign">WITAMY W <img class="logoButtonMain" src="images/gitfilm_logo.png"></h1>
@@ -20,17 +33,29 @@
                     <a href="#"><button class="navButton">Zespół</button></a>
                     <a href="#"><button class="navButton">Zapisz się!</button></a>
                 </nav>
+>>>>>>> test
             </div>
+              <img class="mainPicture" src="images/mainPic.jpeg" alt="mainPicture">
+              <div class="WelcomeSignPicture">
+                  <h1 class="welcomeSign">WITAMY W <img class="logoButtonMain" src="images/gitfilm_logo.png"></h1>
+              </div>
+
             <!--BUTTON------------------------------------------------------------>
+<<<<<<< HEAD
+            <!-- <div id="button"> -->
+                <!-- <a href="#sigin"> -->
+=======
             <div id="signButton">
                 <a href="#signin">
+>>>>>>> test
                     <button>
                         <h1>ZAPISZ SIĘ!</h1>
                         <h3>i bądź na bieżąco</h3>
                     </button>
-                </a>
-            </div>
+                <!-- </a> -->
+            <!-- </div> -->
         </header>
+        <!--MAIN---------------------------------------------  -->
         <main>
 
             <div id="functions">
