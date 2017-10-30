@@ -13,17 +13,17 @@
     justify-content: space-between;
 }
 
-nav{
+#nav nav{
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
 }
 
-img{
-    width: 15%;
+#nav img{
+    width: 200px;
 }
 
-button{
+#nav button{
     border-radius: 5px;
     background-color: #FBE4C1;
     border: none;
@@ -33,19 +33,9 @@ button{
     cursor: pointer;
 }
 
-.button:hover{
+#nav .button:hover{
     background-color: #e4cca5;
 }
-
-.button:focus{
+#nav .button:focus{
     outline-style: none;
 }
-
-/*ul:hover{*/
-    /*background-color: #e4cca5;*/
-/*}*/
-
-/*li a{*/
-    /*text-decoration: none;*/
-    /*color: #070400;*/
-/*}*/
