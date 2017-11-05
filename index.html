@@ -2,19 +2,89 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link rel="stylesheet" href="css/style.css">
         <title>GitFilm</title>
     </head>
     <body>
         <header>
-            <nav>
+            <div id="nav">
+                <img class="navLogo" src="images/gitfilm_logo.png" alt="Logo">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="">Główna</a></li>
+                        <li><a href="">Funkcje</a></li>
+                        <li><a href="">Zespół</a></li>
+                        <li><a href="">Zapisz się</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay"></div>
+            <div class="picture">
+                <img class="mainPicture" src="images/mainPic.jpeg" alt="mainPicture">
+            </div>
 
-            </nav>
+                <div class="WelcomeSignPicture">
+                <h1 class="welcomeSign">WITAMY W GITFILM !<!--<img class="logoButtonMain" src="images/gitfilm_logo.png">--></h1>
+
+            </div>
+
+            <!--BUTTON------------------------------------------------------------>
+            <div id="signButton">
+                <a href="#signin">
+                    <button class="mainButton">
+                        <h1>ZAPISZ SIĘ!</h1>
+                        <h3>i bądź na bieżąco</h3>
+                    </button>
+                </a>
+            </div>
         </header>
         <main>
 
+            <div id="functions">
+                <article>
+                    <img src="images/gitfilm_logo.png" alt="">
+                    <h1>Funckja 1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat officiis, porro
+                        saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic natus nulla
+                        veniam!</p>
+                </article>
+                <article>
+                    <img src="images/gitfilm_logo.png" alt="">
+                    <h1>Funckja 2</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat officiis, porro
+                        saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic natus nulla
+                        veniam!</p>
+                </article>
+                <article>
+                    <img src="images/gitfilm_logo.png" alt="">
+                    <h1>Funckja 3</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat officiis, porro
+                        saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic natus nulla
+                        veniam!</p>
+                </article>
+                <article>
+                    <img src="images/gitfilm_logo.png" alt="">
+                    <h1>Funckja 4</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat officiis, porro
+                        saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic natus nulla
+                        veniam!</p>
+                </article>
+            </div>
+
+            <!--FORM-submit------------------------------------------------------->
+            <div id="signin">
+                <form action="#" method="#">
+                    <h2>Bądź na bieżąco </h2>
+                    <input name="email" type="email" placeholder="Your e-mail adress" required>
+                </form>
+                <h4>Otrzymasz od nas tylko jednego e-maila z datą premiery naszego serwisu</h4>
+                <h6>Zapewniamy bezpieczeństwo i chronimy Twoje dane!!!</h6>
+            </div>
         </main>
         <footer>
 
         </footer>
+
     </body>
 </html>
