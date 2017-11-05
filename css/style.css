@@ -3,30 +3,38 @@
     padding: 0;
 }
 
-#mainPicture{
+.picture {
     height: 100vh;
     margin-top: 100px;
 }
-
 .mainPicture {
     max-width: 100%;
-    /*margin-top: 25%;*/
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.3;
+    z-index: 10;
+
 }
 
 header {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
-    /*align-items: center;*/
+
 }
 
-/*html {*/
-    /*height:100%;*/
-/*}*/
 
 body {
-    /*height: 100%;*/
-    /*width: 100%;*/
     background-image: url("../images/hypnotize.png");
 }
 
