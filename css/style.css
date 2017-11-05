@@ -41,12 +41,10 @@ body {
 
 #signButton {
     position: absolute;
-    top: 40%;
-    left: 60%;
+    bottom: 20%;
+    left: 45%;
     display: flex;
-    background-color: #FBE4C1;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px #fbc0aa;
+
 }
 
 #signButton:hover {
@@ -74,10 +72,14 @@ body {
 
 .WelcomeSignPicture{
     position: absolute;
-    top: 20%;
-    left: 20%;
+    bottom: 30%;
+    left: 30%;
 }
-
+.WelcomeSignPicture h1{
+    font-size: 64px;
+    color: #070400;
+    text-shadow:  -1px 0 black, 0 1px black, 1px 0 black, 0 1px #FCB144;
+}
 .welcomeSign {
     font-style: oblique;
 }
@@ -112,7 +114,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #FCB144;
+    background-color: transparent;
     position: fixed;
     height: 100px;
     width: 100%;
@@ -146,4 +148,11 @@ body {
 }
 .navButton:focus {
     outline-style: none;
+}
+.mainButton {
+    border: 2px solid #FCB144;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #fbc0aa;
+    padding: 5px 40px; 5px 40px;
 }
