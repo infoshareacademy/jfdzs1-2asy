@@ -31,27 +31,59 @@
 header {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
-
 
 body {
     background-image: url("../images/hypnotize.png");
 }
 
-#signButton {
-    position: absolute;
-    bottom: 20%;
-    left: 45%;
-    display: flex;
+/*body header h1 {*/
+    /*display: block;*/
+/*}*/
 
+.WelcomeSignPicture{
+    align-items: center;
+    color: #070400;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 12;
 }
 
-#signButton:hover {
-    /*background-color: #fbd1ad;*/
-    opacity: 0.7;
+.WelcomeSignPicture h1{
+    font-size: 75px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.WelcomeSignPicture h3{
+    letter-spacing: 2px;
+    margin-top: 2%;
+}
+
+.mainButton {
+    margin-top: 3%;
+    font-family: Montserrat, sans-serif;
+    border: 2px solid #070400;
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px #fbc0aa;
+    padding: 5px 40px 5px 40px;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #070400;
+    text-decoration: none;
+}
+
+.mainButton:hover {
+    background-color: rgba(7,4,0, .25);
 }
 
 #signin {
@@ -64,24 +96,6 @@ body {
     border: 2px solid #070400;
     border-radius: 5px;
     padding: 10px;
-}
-
-/*body header h1 {*/
-    /*display: block;*/
-/*}*/
-
-.WelcomeSignPicture{
-    position: absolute;
-    bottom: 30%;
-    left: 30%;
-}
-.WelcomeSignPicture h1{
-    font-size: 64px;
-    color: #070400;
-    text-shadow:  -1px 0 black, 0 1px black, 1px 0 black, 0 1px #FCB144;
-}
-.welcomeSign {
-    font-style: oblique;
 }
 
 .logoButtonMain {
@@ -117,7 +131,7 @@ body {
     background-color: transparent;
     position: fixed;
     height: 100px;
-    width: 100%;
+    width: 1200px;
     justify-content: space-between;
     z-index: 11;
 }
@@ -129,7 +143,7 @@ body {
 }
 
 .navLogo{
-    width: 200px;
+    width: 150px;
     max-height: 100%;
 }
 .menu{
@@ -139,25 +153,25 @@ body {
 
 .menu ul{
     list-style-type: none;
-
 }
 
 .menu li{
     float: left;
     margin-right: 2em;
+    padding: 2px 5px;
+}
+
+.menu li:hover{
+    border-radius: 5px;
+    background-color: rgba(7,4,0, .25);
+    padding: 2px 5px;
 }
 
 .menu li a{
     text-decoration: none;
-    font-size: 2em;
+    font-weight: 400;
+    font-size: 90%;
+    letter-spacing: 1px;
     color: #070400;
-    text-transform: uppercase;
-    font-family: monospace;
-}
-.mainButton {
-    border: 2px solid #FCB144;
-    background-color: transparent;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px #fbc0aa;
-    padding: 5px 40px; 5px 40px;
+    font-family: Montserrat,sans-serif;
 }
