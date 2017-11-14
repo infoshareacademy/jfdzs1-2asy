@@ -3,29 +3,17 @@
     padding: 0;
 }
 
-.picture {
-   /* height: 100vh;
-    margin-top: 100px;*/
-    margin: 0 auto;
-}
-.mainPicture {
+html, body {
     width: 100%;
-    height: 100vh;
-    position: relative;
-    top: 0;
-    bottom: 0;
 }
 
-.overlay {
+.picture {
     height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    opacity: 0.1;
-    z-index: 10;
+    margin: 0 auto;
+    width: 100%;
+    background: url(../images/mainPic.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -42,10 +30,10 @@ body {
     /*display: block;*/
 /*}*/
 
-.WelcomeSignPicture{
+.welcome-sign-picture {
     align-items: center;
     color: #070400;
-    width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     font-family: Montserrat, sans-serif;
@@ -57,13 +45,13 @@ body {
     z-index: 12;
 }
 
-.WelcomeSignPicture h1{
+.welcome-sign-picture h1{
     font-size: 75px;
     font-weight: 700;
     letter-spacing: 5px;
 }
 
-.WelcomeSignPicture h3{
+.welcome-sign-picture h3{
     letter-spacing: 2px;
     margin-top: 2%;
 }
@@ -131,7 +119,7 @@ body {
     background-color: transparent;
     position: fixed;
     height: 100px;
-    width: 1200px;
+    width: 100%;
     justify-content: space-between;
     z-index: 11;
 }
@@ -174,4 +162,10 @@ body {
     letter-spacing: 1px;
     color: #070400;
     font-family: Montserrat,sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+    .picture {
+
+    }
 }
