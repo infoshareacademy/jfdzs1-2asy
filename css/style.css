@@ -27,7 +27,7 @@ body {
 }
 
 /*body header h1 {*/
-    /*display: block;*/
+/*display: block;*/
 /*}*/
 
 .welcome-sign-picture {
@@ -45,13 +45,13 @@ body {
     z-index: 12;
 }
 
-.welcome-sign-picture h1{
+.welcome-sign-picture h1 {
     font-size: 75px;
     font-weight: 700;
     letter-spacing: 5px;
 }
 
-.welcome-sign-picture h3{
+.welcome-sign-picture h3 {
     letter-spacing: 2px;
     margin-top: 2%;
 }
@@ -71,12 +71,12 @@ body {
 }
 
 .mainButton:hover {
-    background-color: rgba(7,4,0, .25);
+    background-color: rgba(7, 4, 0, .25);
 }
 
 #signin {
     font-size: 20px;
-    padding:20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -91,28 +91,31 @@ body {
     height: 10%;
 }
 
-#functions{
+#functions {
     display: flex;
 }
-#functions article{
+
+#functions article {
     text-align: center;
     margin: 50px;
     padding: 20px;
-    background: rgb(255,0,0);
+    background: rgb(255, 0, 0);
     border-radius: 20px;
 }
-#functions article img{
+
+#functions article img {
     max-width: 100%;
 }
-#functions article h1{
+
+#functions article h1 {
     /*text-align: center;*/
 }
+
 #functions article p {
     text-align: justify;
 }
 
-
-#nav{
+#nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -124,44 +127,45 @@ body {
     z-index: 11;
 }
 
-#nav nav{
+#nav nav {
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
 }
 
-.navLogo{
+.navLogo {
     width: 150px;
     max-height: 100%;
 }
-.menu{
+
+.menu {
     margin-right: 30px;
     display: inline;
 }
 
-.menu ul{
+.menu ul {
     list-style-type: none;
 }
 
-.menu li{
+.menu li {
     float: left;
     margin-right: 2em;
     padding: 2px 5px;
 }
 
-.menu li:hover{
+.menu li:hover {
     border-radius: 5px;
-    background-color: rgba(7,4,0, .25);
+    background-color: rgba(7, 4, 0, .25);
     padding: 2px 5px;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
     font-weight: 400;
     font-size: 90%;
     letter-spacing: 1px;
     color: #070400;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 @media screen and (max-width: 800px) {
