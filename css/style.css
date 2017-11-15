@@ -91,14 +91,14 @@ body {
     height: 10%;
 }
 
-#functions {
-    display: flex;
+#functions .article-wrapper {
+    width: 25%;
+    display: inline-block;
+    float: left;
 }
 
-#functions article {
+#functions .article-wrapper article {
     text-align: center;
-    margin: 50px;
-    padding: 20px;
     background: rgb(255, 0, 0);
     border-radius: 20px;
 }
@@ -168,8 +168,15 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
-@media screen and (max-width: 800px) {
-    .picture {
-
-    }
+.team-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
+
+.members img {
+    height: 150px;
+    width: auto;
+}
+
