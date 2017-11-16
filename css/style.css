@@ -11,7 +11,7 @@ html, body {
     height: 100vh;
     margin: 0 auto;
     width: 100%;
-    background: url(../images/mainPic.jpeg) no-repeat;
+    background: url(../images/main-picture.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -47,8 +47,10 @@ body {
 
 .welcome-sign-picture h1 {
     font-size: 75px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 5px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-family: fantasy;
 }
 
 .welcome-sign-picture h3 {
@@ -60,7 +62,7 @@ body {
     margin-top: 3%;
     font-family: Montserrat, sans-serif;
     border: 2px solid #070400;
-    background-color: transparent;
+    background-color: #ff861980;
     border-radius: 10px;
     padding: 5px 40px 5px 40px;
     font-size: 40px;
@@ -119,7 +121,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: transparent;
+    background-color: #ff861980;
     position: fixed;
     height: 100px;
     width: 100%;
