@@ -46,6 +46,7 @@ body {
     font-weight: 900;
     letter-spacing: 15px;
     color: white;
+
 }
 
 .welcome-sign-picture h3 {
@@ -54,21 +55,27 @@ body {
     color: white;
 }
 
+.text{
+    color: #ff8619;
+    /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;*/
+}
 .mainButton {
     margin-top: 3%;
-    border: 2px solid #070400;
-    background-color: #ff861980;
+    /*border: 2px solid #070400;*/
+    /*background-color: #ff8619;*/
+    background-color: #ff8619;
     border-radius: 10px;
     padding: 5px 40px 5px 40px;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 5px;
-    color: #070400;
+    color: white;
     text-decoration: none;
+    /*box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;*/
 }
 
 .mainButton:hover {
-    background-color: rgba(7, 4, 0, .25);
+    box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
 }
 
 #signin {
@@ -116,12 +123,12 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #ff861980;
+    /*background-color: #ff861980;*/
     position: fixed;
     height: 100px;
     width: 100%;
     justify-content: space-between;
-    z-index: 11;
+    z-index: 100;
 }
 
 #nav nav {
@@ -150,10 +157,8 @@ body {
     padding: 2px 5px;
 }
 
-.menu li:hover {
-    border-radius: 5px;
-    background-color: rgba(7, 4, 0, .25);
-    padding: 2px 5px;
+.menu li a:hover {
+    color: #ff8619;
 }
 
 .menu li a {
