@@ -96,6 +96,8 @@ body {
 }
 
 #functions .article-wrapper {
+    padding-top: 5%;
+    height: 250px;
     width: 25%;
     display: inline-block;
     float: left;
@@ -173,11 +175,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
+    padding: 5%;
 }
 
 
 .members img {
-    height: 150px;
+    height: 300px;
     width: auto;
 }
 
