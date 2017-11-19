@@ -5,6 +5,7 @@
 
 html, body {
     width: 100%;
+    font-family: 'Lato', sans-serif;
 }
 
 .picture {
@@ -26,17 +27,12 @@ body {
     background-image: url("../images/hypnotize.png");
 }
 
-/*body header h1 {*/
-/*display: block;*/
-/*}*/
-
 .welcome-sign-picture {
     align-items: center;
     color: #070400;
     width: 100%;
     display: flex;
     flex-direction: column;
-    font-family: Montserrat, sans-serif;
     justify-content: center;
     position: absolute;
     bottom: 30%;
@@ -46,21 +42,20 @@ body {
 }
 
 .welcome-sign-picture h1 {
-    font-size: 75px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    font-family: fantasy;
+    font-size: 150px;
+    font-weight: 900;
+    letter-spacing: 15px;
+    color: white;
 }
 
 .welcome-sign-picture h3 {
     letter-spacing: 2px;
     margin-top: 2%;
+    color: white;
 }
 
 .mainButton {
     margin-top: 3%;
-    font-family: Montserrat, sans-serif;
     border: 2px solid #070400;
     background-color: #ff861980;
     border-radius: 10px;
@@ -136,7 +131,7 @@ body {
 }
 
 .navLogo {
-    width: 150px;
+    width: 220px;
     max-height: 100%;
 }
 
@@ -163,11 +158,10 @@ body {
 
 .menu li a {
     text-decoration: none;
-    font-weight: 400;
-    font-size: 90%;
+    font-weight: 700;
+    font-size: 28px;
     letter-spacing: 1px;
-    color: #070400;
-    font-family: Montserrat, sans-serif;
+    color: white;
 }
 
 .team-section {
