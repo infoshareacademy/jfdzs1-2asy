@@ -1,11 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-html, body {
-    width: 100%;
     font-family: 'Lato', sans-serif;
+
 }
 
 .picture {
@@ -174,6 +171,7 @@ header {
     display: inline;
 }
 
+
 .signInBtn {
     margin-top: 1%;
     background-color: #ff8619;
@@ -194,4 +192,15 @@ header {
 }
 label {
     font-size: 1.5em;
+
+footer {
+    height:100px;
+    font-size: 20px;
+    background-color: #ff8619;
+}
+
+footer p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
