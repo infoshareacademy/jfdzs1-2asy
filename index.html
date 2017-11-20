@@ -114,18 +114,79 @@
                 </div>
             </div>
             <!--FORM-submit------------------------------------------------------->
-            <div id="signin">
-                <form action="#" method="#">
-                    <h2>Bądź na bieżąco </h2>
-                    <input name="email" type="email" placeholder="Your e-mail adress" required>
-                </form>
-                <h4>Otrzymasz od nas tylko jednego e-maila z datą premiery naszego serwisu</h4>
-                <h6>Zapewniamy bezpieczeństwo i chronimy Twoje dane!!!</h6>
-            </div>
-        </main>
-        <footer>
 
-        </footer>
+            <section class="container signIn">
+                <h1>Zapisz się <small>i bądź na bieżąco z</small><img class="img-responsive signInLogo" src="images/gitfilm_logo.png" alt="GitFil Logo"></h1>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-3 control-label">E-mail:</label>
+                        <div class="col-xs-9">
+                            <input type="email" id="inputEmail" class="form-control input-lg" placeholder="adres E-mail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName" class="col-xs-3 control-label">Twoje Imię:</label>
+                        <div class="col-xs-5">
+                            <input type="text" id="firstName" class="form-control input-lg" placeholder="Twoje Imię">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Płeć:</label>
+                        <div class="col-xs-9">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="genderRadios" value="male"> Kobieta
+                                </label>
+                                <label>
+                                    <input type="radio" name="genderRadios" value="female"> Mężczyzna
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="agree"> Akceptuję <a data-toggle="modal" data-target="#termOfUse">Regulamin serwisu</a>.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <button type="button" class="btn btn-primary btn-lg signInBtn" data-toggle="popover" data-placement="bottom" data-content=" " title="Wyślemy do Ciebie tylko jeden e-mail z informacją o dacie premiery">Zapisz się!</button>
+                            <!--<input class="btn btn-primary btn-lg signInBtn" type="submit" value="Zapisz się!">-->
+                        </div>
+                    </div>
+                </form>
+
+    
+
+                <div class="modal fade" tabindex="-1" role="dialog" id="termOfUse">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h2 class="modal-title">Bezpieczeństwo</h2>
+                            </div>
+                            <div class="modal-body">
+                                <h2>Naszym użytkownikom zapewniamy całkowite bezpieczeństwo.</h2>
+                                <h3>Zespół <img src="images/gitfilm_logo.png" width="250px" height="100px"></h3>
+                                    <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z Ustawą z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922).</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+     <script type="text/javascript">
+         $(document).ready(function() {
+             $('.signInBtn').popover();
+             });
+     </script>
     <script src="bootstrap/jquery.min.js"></script>
     <script src="bootstrap/bootstrap.min.js"></script>
     </body>

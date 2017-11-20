@@ -161,4 +161,37 @@ header {
     height: 300px;
     width: auto;
 }
+.signIn {
+    margin-top:12em;
+}
+.signIn h1 {
+    padding: 2em;
+    font-size: 48px;
+}
+.signInLogo {
+    width: 250px;
+    height: 100px;
+    display: inline;
+}
 
+.signInBtn {
+    margin-top: 1%;
+    background-color: #ff8619;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
+    border: none;
+}
+.signInBtn:hover {
+    box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    background-color: #ff8619;
+}
+label {
+    font-size: 1.5em;
+}
