@@ -15,9 +15,9 @@
 }
 
 header {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -100px;
 }
 
 .navbar-default{
@@ -49,7 +49,6 @@ header {
     font-size: 28px;
     letter-spacing: 1px;
     color: white;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
 }
 
 .navbar-default .navbar-right li a:hover {
@@ -76,13 +75,12 @@ header {
     font-weight: 900;
     letter-spacing: 15px;
     color: white;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
 }
 
 .text{
     color: #ff8619;
-    text-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
 }
+
 .mainButton {
     margin-top: 1%;
     background-color: #ff8619;
@@ -93,8 +91,6 @@ header {
     letter-spacing: 5px;
     color: white;
     text-decoration: none;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
-    box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
 }
 
 .mainButton:hover {
@@ -205,5 +201,4 @@ footer p {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    text-shadow: 0 0 1px #333, 0 0 2px #333;
 }
