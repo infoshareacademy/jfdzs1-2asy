@@ -2,37 +2,50 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
         <title>GitFilm</title>
     </head>
     <body>
-        <header>
-            <div id="nav">
-                <img class="navLogo" src="images/gitfilm_logo.png" alt="Logo">
-                <nav class="menu">
-                    <ul>
+            <!--Navigation-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navBar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/git_film_white_orange_logo.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="navBar">
+                    <ul class="nav navbar-nav">
                         <li><a href="#start">Główna</a></li>
                         <li><a href="#functions">Funkcje</a></li>
                         <li><a href="#team">Zespół</a></li>
                         <li><a href="#signin">Zapisz się</a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
+        </nav>
+        <header>
             <div id="start" class="picture"></div>
             <div class="welcome-sign-picture">
-                <h1>Witamy w GitFilm!<!--<img class="logoButtonMain" src="images/gitfilm_logo.png">--></h1>
-                <h3>Innowacyjny serwis, który sprawi, że poszukiwanie i wybór filmu na wieczór stanie się czystą przyjemnością!</h3>
+                <h1>Witamy w <span class="text">G<div class="shake-chunk shake-constant"><img src="images/popcorn%20(1).png" class="img-responsive"></div>t</span>Film!</h1>
+                <h3></h3>
                 <!--BUTTON------------------------------------------------------------>
-                <a href="#" class="mainButton">ZAPISZ SIĘ! i bądź na bieżąco</a>
+                <a href="#" class="mainButton">ZAPISZ SIĘ!</a>
             </div>
         </header>
         <main>
-            <!--TEAM------------------------------------------------------->
-            <div id="team">
-
-            </div>
             <!--FUNCTIONS------------------------------------------------------->
             <div id="functions">
                 <div class="article-wrapper">
@@ -80,36 +93,101 @@
                     </article>
                 </div>
             </div>
+            <!--TEAM------------------------------------------------------->
+            <div id="team">
+                <div class="team-section">
+                    <div class="members">
+                        <img src="images/team.png">
+                        <h4 class="member-description">Marcin</h4>
+                    </div>
+                    <div class="members">
+                        <img src="images/team.png">
+                        <h4 class="member-description">Mariusz</h4>
+                    </div>
+                    <div class="members">
+                        <img src="images/team.png">
+                        <h4 class="member-description">Piotr</h4>
+                    </div>
+                    <div class="members">
+                        <img src="images/team.png">
+                        <h4 class="member-description">Ania</h4>
+                    </div>
+                </div>
+            </div>
             <!--FORM-submit------------------------------------------------------->
-            <div id="signin">
-                <form action="#" method="#">
-                    <h2>Bądź na bieżąco </h2>
-                    <input name="email" type="email" placeholder="Your e-mail adress" required>
+
+            <section class="container signIn">
+                <h1>Zapisz się <small>i bądź na bieżąco z</small><img class="img-responsive signInLogo" src="images/gitfilm_logo.png" alt="GitFil Logo"></h1>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-3 control-label">E-mail:</label>
+                        <div class="col-xs-9">
+                            <input type="email" id="inputEmail" class="form-control input-lg" placeholder="adres E-mail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName" class="col-xs-3 control-label">Twoje Imię:</label>
+                        <div class="col-xs-5">
+                            <input type="text" id="firstName" class="form-control input-lg" placeholder="Twoje Imię">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Płeć:</label>
+                        <div class="col-xs-9">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="genderRadios" value="male"> Kobieta
+                                </label>
+                                <label>
+                                    <input type="radio" name="genderRadios" value="female"> Mężczyzna
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="agree"> Akceptuję <a data-toggle="modal" data-target="#termOfUse">Regulamin serwisu</a>.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <button type="button" class="btn btn-primary btn-lg signInBtn" data-toggle="popover" data-placement="bottom" data-content=" " title="Wyślemy do Ciebie tylko jeden e-mail z informacją o dacie premiery">Zapisz się!</button>
+                        </div>
+                    </div>
                 </form>
-                <h4>Otrzymasz od nas tylko jednego e-maila z datą premiery naszego serwisu</h4>
-                <h6>Zapewniamy bezpieczeństwo i chronimy Twoje dane!!!</h6>
-            </div>
+            </section>
         </main>
-        <footer>
-            <div class="team-section">
-                <div class="members">
-                    <img src="images/team.png">
-                    <h4 class="member-description">Name Surname</h4>
-                </div>
-                <div class="members">
-                    <img src="images/team.png">
-                    <h4 class="member-description">Name Surname</h4>
-                </div>
-                <div class="members">
-                    <img src="images/team.png">
-                    <h4 class="member-description">Name Surname</h4>
-                </div>
-                <div class="members">
-                    <img src="images/team.png">
-                    <h4 class="member-description">Name Surname</h4>
-                </div>
-            </div>
+
+        <!--Footer---------------------------------------------------------------------->
+        <footer class="container-fluid text-center">
+            <p>Copyright 2017 by GitFilm</p>
         </footer>
 
+    <!--MODAL termOfUse----------------------------------------------------------------->
+    <div class="modal fade" tabindex="-1" role="dialog" id="termOfUse">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title">Bezpieczeństwo</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Naszym użytkownikom zapewniamy całkowite bezpieczeństwo.</h2>
+                    <h3>Zespół <img src="images/gitfilm_logo.png" width="250px" height="100px"></h3>
+                        <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z Ustawą z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922).</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
     </body>
 </html>
