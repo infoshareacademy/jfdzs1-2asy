@@ -114,34 +114,38 @@ header {
     height: 10%;
 }
 
-#functions .article-wrapper {
-    padding-top: 5%;
-    height: 250px;
-    width: 25%;
-    display: inline-block;
-    float: left;
+.function-h1{
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: 3px;
+    padding: 30px 0;
 }
 
-#functions .article-wrapper article {
-    text-align: center;
-    background: rgb(255, 0, 0);
-    border-radius: 20px;
+.row{
+    padding-bottom: 30px;
+}
+.box .img-circle{
+    max-width: 250px;
 }
 
-#functions article img {
-    max-width: 100%;
+.img-thumbnail{
+    background-color: #FF8619;
+    padding: 7px;
 }
 
-#functions article h1 {
-    /*text-align: center;*/
+.function-text{
+    /*color: #FF8619;*/
+    font-weight: 700;
 }
 
-#functions article p {
-    text-align: justify;
+.box img:hover{
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
 }
 
 .team-section {
-    padding-top: 30%;
+    padding-top: 5%;
 }
 
 .members {
