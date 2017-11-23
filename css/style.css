@@ -14,18 +14,13 @@
     background-position: center;
 }
 
-header {
-    flex-direction: column;
-    align-items: center;
-    margin-top: -100px;
-}
-
 .navbar-default{
     height: 100px;
     border-radius: 0px;
     border: none;
     margin: 0;
     background: none;
+    position: absolute;
 }
 
 .navbar-brand img {
@@ -68,9 +63,9 @@ header {
 
 .welcome-sign-picture h1 {
     text-align: center;
-    font-size: 85px;
+    font-size: 7em;
     font-weight: 900;
-    letter-spacing: 15px;
+    letter-spacing: 10px;
     color: white;
 }
 
@@ -79,11 +74,10 @@ header {
 }
 
 .mainButton {
-    margin-top: 1%;
     background-color: #ff8619;
     border-radius: 10px;
-    padding: 5px 30px 5px 30px;
-    font-size: 40px;
+    padding: 5px 30px;
+    font-size: 3em;
     font-weight: 900;
     letter-spacing: 5px;
     color: white;
@@ -145,7 +139,7 @@ header {
 }
 
 .team-section {
-    padding-top: 5%;
+    padding-top: 5em;
 }
 
 .members {
