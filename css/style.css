@@ -21,6 +21,7 @@
     margin: 0;
     background: none;
     position: absolute;
+    width: 100%;
 }
 
 .navbar-brand img {
@@ -144,7 +145,7 @@
 
 .members {
     width: 20%;
-    float: left;
+    display: inline-block;
     margin: 0 auto;
     border: 20px solid #FF8619;
     border-radius: 75px;
