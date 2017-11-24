@@ -15,7 +15,7 @@
 }
 
 .navbar-default{
-    height: 100px;
+    height: 80px;
     border-radius: 0px;
     border: none;
     margin: 0;
@@ -29,22 +29,29 @@
 }
 
 .navbar-default .navbar-brand {
-    height: 100px;
+    height: 80px;
     padding: 0;
+}
+
+.navbar-collapse {
+    overflow: visible;
 }
 
 .navbar-right {
     margin-top: 1.8em;
-    height: 100px;
 }
 
 .navbar-default .navbar-right li a {
-    margin-right: 20px;
+    margin-right: 12px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 22px;
     letter-spacing: 1px;
     color: white;
+}
+
+.navbar-right li:last-child a{
+    margin-right: 0;
 }
 
 .navbar-default .navbar-right li a:hover {
@@ -59,11 +66,10 @@
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 12;
 }
 
 .welcome-sign-picture h1 {
-    text-align: center;
+    margin: 0 auto 1em;
     font-size: 7em;
     font-weight: 900;
     letter-spacing: 10px;
@@ -72,6 +78,16 @@
 
 .text{
     color: #ff8619;
+}
+
+.rwd-break {
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    .rwd-break {
+        display: inline;
+    }
 }
 
 .main-button {
