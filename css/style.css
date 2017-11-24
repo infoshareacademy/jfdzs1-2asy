@@ -1,43 +1,60 @@
 * {
     margin: 0;
     padding: 0;
-}
+    font-family: 'Lato', sans-serif;
 
-html, body {
-    width: 100%;
 }
 
 .picture {
     height: 100vh;
     margin: 0 auto;
     width: 100%;
-    background: url(../images/mainPic.jpeg) no-repeat;
+    background: url(../images/main-picture.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.navbar-default{
+    height: 100px;
+    border-radius: 0px;
+    border: none;
+    margin: 0;
+    background: none;
+    position: absolute;
+    width: 100%;
 }
 
-body {
-    background-image: url("../images/hypnotize.png");
+.navbar-brand img {
+    max-height: 100%;
 }
 
-/*body header h1 {*/
-/*display: block;*/
-/*}*/
+.navbar-default .navbar-brand {
+    height: 100px;
+    padding: 0;
+}
+
+.navbar-right {
+    margin-top: 1.8em;
+    height: 100px;
+}
+
+.navbar-default .navbar-right li a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.navbar-default .navbar-right li a:hover {
+    color: #ff8619;
+    text-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
+}
 
 .welcome-sign-picture {
-    align-items: center;
     color: #070400;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: Montserrat, sans-serif;
-    justify-content: center;
     position: absolute;
     bottom: 30%;
     left: 50%;
@@ -46,137 +63,144 @@ body {
 }
 
 .welcome-sign-picture h1 {
-    font-size: 75px;
-    font-weight: 700;
-    letter-spacing: 5px;
+    text-align: center;
+    font-size: 7em;
+    font-weight: 900;
+    letter-spacing: 10px;
+    color: white;
 }
 
-.welcome-sign-picture h3 {
-    letter-spacing: 2px;
-    margin-top: 2%;
+.text{
+    color: #ff8619;
 }
 
-.mainButton {
-    margin-top: 3%;
-    font-family: Montserrat, sans-serif;
-    border: 2px solid #070400;
-    background-color: transparent;
+.main-button {
+    background-color: #ff8619;
     border-radius: 10px;
-    padding: 5px 40px 5px 40px;
-    font-size: 40px;
-    font-weight: 700;
+    padding: 5px 30px;
+    font-size: 3em;
+    font-weight: 900;
     letter-spacing: 5px;
-    color: #070400;
+    color: white;
     text-decoration: none;
 }
 
-.mainButton:hover {
-    background-color: rgba(7, 4, 0, .25);
+.main-button:hover {
+    box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
 }
 
-#signin {
+#sign-in {
     font-size: 20px;
     padding: 20px;
     text-align: center;
 }
 
-#signin input {
+#sign-in input {
     border: 2px solid #070400;
     border-radius: 5px;
     padding: 10px;
 }
 
-.logoButtonMain {
+.logo-button-main {
     width: 15%;
     height: 10%;
 }
 
-#functions .article-wrapper {
-    width: 25%;
-    display: inline-block;
-    float: left;
+.function-h1{
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: 3px;
+    padding: 30px 0;
 }
 
-#functions .article-wrapper article {
-    text-align: center;
-    background: rgb(255, 0, 0);
-    border-radius: 20px;
+.row{
+    padding-bottom: 30px;
+}
+.box .img-circle{
+    max-width: 250px;
 }
 
-#functions article img {
-    max-width: 100%;
+.img-thumbnail{
+    background-color: #FF8619;
+    padding: 7px;
 }
 
-#functions article h1 {
-    /*text-align: center;*/
+.function-text{
+    /*color: #FF8619;*/
+    font-weight: 700;
 }
 
-#functions article p {
-    text-align: justify;
-}
-
-#nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: transparent;
-    position: fixed;
-    height: 100px;
-    width: 100%;
-    justify-content: space-between;
-    z-index: 11;
-}
-
-#nav nav {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 30px;
-}
-
-.navLogo {
-    width: 150px;
-    max-height: 100%;
-}
-
-.menu {
-    margin-right: 30px;
-    display: inline;
-}
-
-.menu ul {
-    list-style-type: none;
-}
-
-.menu li {
-    float: left;
-    margin-right: 2em;
-    padding: 2px 5px;
-}
-
-.menu li:hover {
-    border-radius: 5px;
-    background-color: rgba(7, 4, 0, .25);
-    padding: 2px 5px;
-}
-
-.menu li a {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 90%;
-    letter-spacing: 1px;
-    color: #070400;
-    font-family: Montserrat, sans-serif;
+.box img:hover{
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
 }
 
 .team-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    padding-top: 5em;
 }
 
+.members {
+    width: 20%;
+    display: inline-block;
+    margin: 0 auto;
+    border: 20px solid #FF8619;
+    border-radius: 75px;
+}
 
 .members img {
-    height: 150px;
+    height: 200px;
     width: auto;
 }
 
+.sign-in {
+    margin-top:12em;
+    margin-bottom: 12em;
+}
+.sign-in h1 {
+    padding: 2em;
+    font-size: 48px;
+}
+.sign-in-logo {
+    width: 250px;
+    height: 100px;
+    display: inline;
+}
+
+
+.sign-in-btn {
+    margin-top: 1%;
+    background-color: #ff8619;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    /*text-shadow: 0 0 1px #fff, 0 0 2px #fff;*/
+    /*box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;*/
+    border: none;
+}
+.sign-in-btn:hover {
+    box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
+    text-decoration: none;
+    color: white;
+    /*text-shadow: 0 0 1px #fff, 0 0 2px #fff;*/
+    background-color: #ff8619;
+}
+label {
+    font-size: 1.5em;
+}
+
+footer {
+    height: 100px;
+    font-size: 20px;
+    background-color: #ff8619;
+}
+
+footer p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
