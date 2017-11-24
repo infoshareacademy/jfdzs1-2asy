@@ -157,6 +157,7 @@
 
 .team-section {
     padding-top: 5em;
+    padding-bottom: 5em;
     background: #868686;
 }
 
@@ -172,38 +173,35 @@
     margin: 1em auto;
 }
 
-.sign-in {
-    margin-top:12em;
+.signIn {
+    margin-top:8em;
     margin-bottom: 12em;
 }
-.sign-in h1 {
-    padding: 2em;
+.signIn h1 {
+    padding: 1.5em;
     font-size: 48px;
 }
-.sign-in-logo {
+.signInLogo {
     width: 250px;
     height: 100px;
     display: inline;
 }
 
 
-.sign-in-btn {
+.signInBtn {
     margin-top: 1%;
     background-color: #ff8619;
     font-weight: bold;
     letter-spacing: 2px;
     color: white;
     text-decoration: none;
-    /*text-shadow: 0 0 1px #fff, 0 0 2px #fff;*/
-    /*box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;*/
     border: none;
 }
-.sign-in-btn:hover {
-    box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
+.signInBtn:hover {
+    box-shadow: 0 0 10px #ff8619, 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 350px #ff8619, 0 0 50px #ff8619;
     text-decoration: none;
     color: white;
-    /*text-shadow: 0 0 1px #fff, 0 0 2px #fff;*/
-    background-color: #ff8619;
+    background: #ff8619;
 }
 label {
     font-size: 1.5em;
