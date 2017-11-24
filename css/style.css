@@ -74,7 +74,7 @@
     color: #ff8619;
 }
 
-.mainButton {
+.main-button {
     background-color: #ff8619;
     border-radius: 10px;
     padding: 5px 30px;
@@ -85,26 +85,26 @@
     text-decoration: none;
 }
 
-.mainButton:hover {
+.main-button:hover {
     box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
     text-decoration: none;
     color: white;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff;
 }
 
-#signin {
+#sign-in {
     font-size: 20px;
     padding: 20px;
     text-align: center;
 }
 
-#signin input {
+#sign-in input {
     border: 2px solid #070400;
     border-radius: 5px;
     padding: 10px;
 }
 
-.logoButtonMain {
+.logo-button-main {
     width: 15%;
     height: 10%;
 }
@@ -156,37 +156,37 @@
     width: auto;
 }
 
-.signIn {
+.sign-in {
     margin-top:12em;
     margin-bottom: 12em;
 }
-.signIn h1 {
+.sign-in h1 {
     padding: 2em;
     font-size: 48px;
 }
-.signInLogo {
+.sign-in-logo {
     width: 250px;
     height: 100px;
     display: inline;
 }
 
 
-.signInBtn {
+.sign-in-btn {
     margin-top: 1%;
     background-color: #ff8619;
     font-weight: bold;
     letter-spacing: 2px;
     color: white;
     text-decoration: none;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
-    box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
+    /*text-shadow: 0 0 1px #fff, 0 0 2px #fff;*/
+    /*box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;*/
     border: none;
 }
-.signInBtn:hover {
+.sign-in-btn:hover {
     box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
     text-decoration: none;
     color: white;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    /*text-shadow: 0 0 1px #fff, 0 0 2px #fff;*/
     background-color: #ff8619;
 }
 label {
