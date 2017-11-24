@@ -141,19 +141,19 @@
 
 .team-section {
     padding-top: 5em;
+    background: #868686;
 }
 
 .members {
-    width: 20%;
-    display: inline-block;
-    margin: 0 auto;
-    border: 20px solid #FF8619;
-    border-radius: 75px;
+    border: 0.5em solid #FF8619;
+    border-radius: 3em;
+    margin: 1em auto;
+    width: 250px;
 }
 
 .members img {
-    height: 200px;
-    width: auto;
+    max-height: 200px;
+    margin: 1em auto;
 }
 
 .sign-in {
