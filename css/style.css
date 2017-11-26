@@ -22,6 +22,7 @@
     background: none;
     position: absolute;
     width: 100%;
+    z-index: 99;
 }
 
 .navbar-brand img {
@@ -35,6 +36,14 @@
 
 .navbar-collapse {
     overflow: visible;
+    border: none;
+}
+
+@media (max-width: 768px){
+    .navbar-nav {
+        background: #ff8619;
+        text-align: center;
+    }
 }
 
 .navbar-right {
