@@ -127,26 +127,32 @@
 
 .function-h1{
     font-weight: 900;
-    font-size: 45px;
+    font-size: 3em;
     letter-spacing: 3px;
     padding: 30px 0;
 }
 
+.function-p{
+    text-align: justify;
+}
 .row{
     padding-bottom: 30px;
 }
 .box .img-circle{
     max-width: 250px;
 }
-
+.box2{
+    max-width: 300px;
+    margin: auto;
+}
 .img-thumbnail{
     background-color: #FF8619;
     padding: 7px;
 }
 
 .function-text{
-    /*color: #FF8619;*/
     font-weight: 700;
+    font-size: 28px;
 }
 
 .box img:hover{
@@ -223,4 +229,53 @@ footer p {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .function-h1{
+        font-weight: 700;
+        font-size: 1.8em;
+        letter-spacing: 2px;
+        padding: 20px 0;
+    }
+    .function-text{
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-bottom: 36px;
+    }
+    .welcome-sign-picture h1 {
+        font-size: 5em;
+    }
+    .main-button {
+        font-size: 3em;
+    }
+    .shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
+        max-width: 80px;
+    }
+    .box2{
+        margin: auto;
+    }
+    .box img:hover{
+        transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+    }
+    .row {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .welcome-sign-picture {
+        bottom: 40%;
+    }
+    .welcome-sign-picture h1 {
+        font-size: 3em;
+    }
+    .main-button {
+        font-size: 2em;
+    }
+    .shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
+        max-width: 40px;
+    }
 }
