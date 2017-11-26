@@ -208,9 +208,23 @@
     height: 100px;
     display: inline;
 }
-
-
-.signInBtn {
+.sign-in {
+    margin-top:8em;
+    margin-bottom: 12em;
+}
+.sign-in h1 {
+    padding: 1.5em;
+    font-size: 48px;
+}
+.sign-in-logo {
+    width: 250px;
+    height: 100px;
+    display: inline;
+}
+.btn {
+    background: #ff8619;
+}
+.sign-in-btn {
     margin-top: 1%;
     background-color: #ff8619;
     font-weight: bold;
@@ -219,28 +233,22 @@
     text-decoration: none;
     border: none;
 }
-.signInBtn:hover {
-    box-shadow: 0 0 10px #ff8619, 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 350px #ff8619, 0 0 50px #ff8619;
-    text-decoration: none;
-    color: white;
+.sign-in-btn:hover {
     background: #ff8619;
 }
 label {
     font-size: 1.5em;
 }
-
 footer {
     height: 100px;
     font-size: 20px;
     background-color: #ff8619;
 }
-
 footer p {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-
 @media (max-width: 768px) {
     .function-header{
         font-weight: 700;
