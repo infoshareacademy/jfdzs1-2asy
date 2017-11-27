@@ -14,18 +14,15 @@
     background-position: center;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .navbar-default{
-    height: 100px;
+    height: 80px;
     border-radius: 0px;
     border: none;
     margin: 0;
     background: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }
 
 .navbar-brand img {
@@ -33,23 +30,37 @@ header {
 }
 
 .navbar-default .navbar-brand {
-    height: 100px;
+    height: 80px;
     padding: 0;
+}
+
+.navbar-collapse {
+    overflow: visible;
+    border: none;
+}
+
+@media (max-width: 768px){
+    .navbar-nav {
+        background: #ff8619;
+        text-align: center;
+    }
 }
 
 .navbar-right {
     margin-top: 1.8em;
-    height: 100px;
 }
 
 .navbar-default .navbar-right li a {
-    margin-right: 20px;
+    margin-right: 12px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 22px;
     letter-spacing: 1px;
     color: white;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+}
+
+.navbar-right li:last-child a{
+    margin-right: 0;
 }
 
 .navbar-default .navbar-right li a:hover {
@@ -58,112 +69,137 @@ header {
 }
 
 .welcome-sign-picture {
-    align-items: center;
     color: #070400;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: absolute;
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 12;
 }
 
 .welcome-sign-picture h1 {
-    font-size: 120px;
+    margin: 0 auto 1em;
+    font-size: 7em;
     font-weight: 900;
-    letter-spacing: 15px;
+    letter-spacing: 10px;
     color: white;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
 }
 
 .text{
     color: #ff8619;
-    text-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
 }
-.mainButton {
-    margin-top: 1%;
+
+.rwd-break {
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    .rwd-break {
+        display: inline;
+    }
+}
+
+.main-button {
     background-color: #ff8619;
     border-radius: 10px;
-    padding: 5px 30px 5px 30px;
-    font-size: 40px;
+    padding: 5px 30px;
+    font-size: 3em;
     font-weight: 900;
     letter-spacing: 5px;
     color: white;
     text-decoration: none;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
-    box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
 }
 
-.mainButton:hover {
+.main-button:hover {
     box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
     text-decoration: none;
     color: white;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff;
 }
 
-#signin {
+#sign-in {
     font-size: 20px;
     padding: 20px;
     text-align: center;
 }
 
-#signin input {
+#sign-in input {
     border: 2px solid #070400;
     border-radius: 5px;
     padding: 10px;
 }
 
-.logoButtonMain {
+.logo-button-main {
     width: 15%;
     height: 10%;
 }
 
-#functions .article-wrapper {
-    padding-top: 5%;
-    height: 250px;
-    width: 25%;
-    display: inline-block;
-    float: left;
+.function-header{
+    font-weight: 900;
+    font-size: 3em;
+    letter-spacing: 3px;
+    padding: 30px 0;
 }
 
-#functions .article-wrapper article {
-    text-align: center;
-    background: rgb(255, 0, 0);
-    border-radius: 20px;
-}
-
-#functions article img {
-    max-width: 100%;
-}
-
-#functions article h1 {
-    /*text-align: center;*/
-}
-
-#functions article p {
+.function-description{
     text-align: justify;
+}
+.row{
+    padding-bottom: 30px;
+}
+.feature-tile .img-circle{
+    max-width: 250px;
+}
+.feature-tile{
+    max-width: 300px;
+    margin: auto;
+}
+.img-thumbnail{
+    background-color: #FF8619;
+    padding: 7px;
+}
+
+.function-text{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.feature-tile img:hover{
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
 }
 
 .team-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background: #868686;
+}
+
+.members {
+    border: 0.5em solid #FF8619;
+    border-radius: 3em;
+    margin: 1em auto;
+    width: 250px;
 }
 
 .members img {
-    height: 300px;
-    width: auto;
+    max-height: 200px;
+    margin: 1em auto;
 }
+
+.social-media {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
 .signIn {
-    margin-top:12em;
+    margin-top:8em;
     margin-bottom: 12em;
 }
 .signIn h1 {
-    padding: 2em;
+    padding: 1.5em;
     font-size: 48px;
 }
 .signInLogo {
@@ -180,16 +216,13 @@ header {
     letter-spacing: 2px;
     color: white;
     text-decoration: none;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
-    box-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
     border: none;
 }
 .signInBtn:hover {
-    box-shadow: 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 40px #ff8619, 0 0 70px #ff8619, 0 0 100px #ff8619;
+    box-shadow: 0 0 10px #ff8619, 0 0 10px #ff8619, 0 0 20px #ff8619, 0 0 350px #ff8619, 0 0 50px #ff8619;
     text-decoration: none;
     color: white;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
-    background-color: #ff8619;
+    background: #ff8619;
 }
 label {
     font-size: 1.5em;
@@ -205,5 +238,53 @@ footer p {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    text-shadow: 0 0 1px #333, 0 0 2px #333;
+}
+
+@media (max-width: 768px) {
+    .function-header{
+        font-weight: 700;
+        font-size: 1.8em;
+        letter-spacing: 2px;
+        padding: 20px 0;
+    }
+    .function-text{
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-bottom: 36px;
+    }
+    .welcome-sign-picture h1 {
+        font-size: 5em;
+    }
+    .main-button {
+        font-size: 3em;
+    }
+    .shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
+        max-width: 80px;
+    }
+    .feature-tile{
+        margin: auto;
+    }
+    .feature-tile img:hover{
+        transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+    }
+    .row {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .welcome-sign-picture {
+        bottom: 40%;
+    }
+    .welcome-sign-picture h1 {
+        font-size: 3em;
+    }
+    .main-button {
+        font-size: 2em;
+    }
+    .shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
+        max-width: 40px;
+    }
 }

@@ -7,11 +7,13 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
         <title>GitFilm</title>
     </head>
     <body>
             <!--Navigation-->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -22,7 +24,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/git_film_white_orange_logo.png" alt="Logo">
+                        <img src="images/git-film-logo.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,110 +40,137 @@
         </nav>
         <header>
             <div id="start" class="picture"></div>
-            <div class="welcome-sign-picture">
-                <h1>Witamy w <span class="text">G<div class="shake-chunk shake-constant"><img src="images/popcorn%20(1).png" class="img-responsive"></div>t</span>Film!</h1>
+            <div class="welcome-sign-picture container text-center">
+                <h1>Witamy w <span class="rwd-break"><span class="text">G<div class="shake-chunk shake-constant"><img src="images/popcorn.png" class="img-responsive"></div>t</span>Film!</span></h1>
                 <h3></h3>
                 <!--BUTTON------------------------------------------------------------>
-                <a href="#" class="mainButton">ZAPISZ SIĘ!</a>
+                <a href="#signin" class="main-button">ZAPISZ SIĘ!</a>
             </div>
         </header>
         <main>
             <!--FUNCTIONS------------------------------------------------------->
             <div id="functions">
-                <div class="article-wrapper">
-                    <article>
-                        <img src="images/gitfilm_logo.png" alt="">
-                        <h1>Funckja 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat
-                            officiis, porro
-                            saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic
-                            natus nulla
-                            veniam!</p>
-                    </article>
-                </div>
-                <div class="article-wrapper">
-                    <article>
-                        <img src="images/gitfilm_logo.png" alt="">
-                        <h1>Funckja 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat
-                            officiis, porro
-                            saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic
-                            natus nulla
-                            veniam!</p>
-                    </article>
-                </div>
-                <div class="article-wrapper">
-                    <article>
-                        <img src="images/gitfilm_logo.png" alt="">
-                        <h1>Funckja 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat
-                            officiis, porro
-                            saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic
-                            natus nulla
-                            veniam!</p>
-                    </article>
-                </div>
-                <div class="article-wrapper">
-                    <article>
-                        <img src="images/gitfilm_logo.png" alt="">
-                        <h1>Funckja 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque error fugiat
-                            officiis, porro
-                            saepe velit! Accusamus at necessitatibus optio, quae repellat sit vel veritatis! Eaque hic
-                            natus nulla
-                            veniam!</p>
-                    </article>
+                <div class="container">
+                    <h1 class="function-header text-center"><span class="text">P</span>oznaj funkcjonalności naszej strony:</h1>
+                    <div class="row">
+                        <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                            <div class="feature-tile">
+                                <img src="images/fonction-search.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">Wyszukiwarka</h1>
+                                <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                            </div>
+                        </div>
+                       <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                           <div class="feature-tile">
+                                <img src="images/function-mobile.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">Urządzenia mobilne</h1>
+                               <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                           </div>
+                        </div>
+                        <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                            <div class="feature-tile">
+                                <img src="images/function-star.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">Wszystkie oceny</h1>
+                                <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                            <div class="feature-tile">
+                                <img src="images/function-top.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">TOP 100</h1>
+                                <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                            <div class="feature-tile">
+                                <img src="images/function-top.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">Najlepsze</h1>
+                                <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                            <div class="feature-tile">
+                                <img src="images/function-top.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">Najgorsze</h1>
+                                <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                            <div class="feature-tile">
+                                <img src="images/function-top.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">Przyjazny interfejs</h1>
+                                <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                            </div>
+                        </div>
+                        <div class="box col-xs-12 col-sm-6 col-lg-3 text-center">
+                            <div class="feature-tile">
+                                <img src="images/function-top.jpg" alt="" class="img-circle img-thumbnail">
+                                <h1 class="function-text">Twoja lista filmów</h1>
+                                <p class="function-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolore eaque error explicabo molestiae qui quos tempora? Ad at consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--TEAM------------------------------------------------------->
-            <div id="team">
-                <div class="team-section">
-                    <div class="members">
-                        <img src="images/team.png">
+            <div class="team-section">
+            <div id="team" class="container text-center">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-lg-3">
+                        <div class="members">
+                        <img src="images/miniman/superheroe.png" class="img-responsive">
                         <h4 class="member-description">Marcin</h4>
+                        <div class="social-media">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <a href="https://www.linkedin.com">Profil</a>
+                        </div>
+                        </div>
                     </div>
-                    <div class="members">
-                        <img src="images/team.png">
+                    <div class="col-xs-12 col-sm-6 col-lg-3">
+                        <div class="members">
+                        <img src="images/miniman/superheroe-10.png" class="img-responsive">
                         <h4 class="member-description">Mariusz</h4>
+                        <div class="social-media">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <a href="https://www.linkedin.com">Profil</a>
+                        </div>
+                        </div>
                     </div>
-                    <div class="members">
-                        <img src="images/team.png">
+                    <div class="col-xs-12 col-sm-6 col-lg-3">
+                        <div class="members">
+                        <img src="images/miniman/superheroe-11.png" class="img-responsive">
                         <h4 class="member-description">Piotr</h4>
+                        <div class="social-media">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <a href="https://www.linkedin.com">Profil</a>
+                        </div>
+                        </div>
                     </div>
-                    <div class="members">
-                        <img src="images/team.png">
+                    <div class="col-xs-12 col-sm-6 col-lg-3">
+                        <div class="members">
+                        <img src="images/miniman/superheroe-13.png" class="img-responsive">
                         <h4 class="member-description">Ania</h4>
+                        <div class="social-media">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <a href="https://www.linkedin.com">Profil</a>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            </div>
             <!--FORM-submit------------------------------------------------------->
-
-            <section class="container signIn">
-                <h1>Zapisz się <small>i bądź na bieżąco z</small><img class="img-responsive signInLogo" src="images/gitfilm_logo.png" alt="GitFil Logo"></h1>
+            <section class="container signIn"  id="signin">
+                <div class="row">
+                     <h1>Zapisz się <small>i bądź na bieżąco z</small><img class="img-responsive signInLogo" src="images/gitfilm_logo.png" alt="GitFil Logo"></h1>
+                </div>
                 <form class="form-horizontal">
                     <div class="form-group">
-                        <label for="inputEmail" class="col-sm-3 control-label">E-mail:</label>
-                        <div class="col-xs-9">
+                        <label for="inputEmail" class="col-xs-3 control-label">E-mail:</label>
+                        <div class="col-xs-7">
                             <input type="email" id="inputEmail" class="form-control input-lg" placeholder="adres E-mail">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="firstName" class="col-xs-3 control-label">Twoje Imię:</label>
-                        <div class="col-xs-5">
-                            <input type="text" id="firstName" class="form-control input-lg" placeholder="Twoje Imię">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label">Płeć:</label>
-                        <div class="col-xs-9">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="genderRadios" value="male"> Kobieta
-                                </label>
-                                <label>
-                                    <input type="radio" name="genderRadios" value="female"> Mężczyzna
-                                </label>
-                            </div>
                         </div>
                     </div>
                     <div class="form-group">
