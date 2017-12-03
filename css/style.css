@@ -5,15 +5,6 @@
 
 }
 
-.picture {
-    height: 100vh;
-    margin: 0 auto;
-    width: 100%;
-    background: url(../images/main-picture.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .navbar-default{
     height: 80px;
     border-radius: 0px;
@@ -251,8 +242,8 @@ footer p {
 }
 @media (max-width: 768px) {
     .function-header{
-        font-weight: 700;
-        font-size: 1.8em;
+        font-weight: 500;
+        font-size: 1.6em;
         letter-spacing: 2px;
         padding: 20px 0;
     }
@@ -262,13 +253,13 @@ footer p {
         margin-bottom: 36px;
     }
     .welcome-sign-picture h1 {
-        font-size: 5em;
+        font-size: 4em;
     }
     .main-button {
-        font-size: 3em;
+        font-size: 2em;
     }
     .shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
-        max-width: 80px;
+        max-width: 60px;
     }
     .feature-tile{
         margin: auto;
@@ -285,15 +276,28 @@ footer p {
 
 @media (max-width: 450px) {
     .welcome-sign-picture {
-        bottom: 40%;
+        bottom: 20%;
     }
     .welcome-sign-picture h1 {
-        font-size: 3em;
-    }
-    .main-button {
         font-size: 2em;
     }
-    .shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
-        max-width: 40px;
+    .main-button {
+        font-size: 1.5em;
     }
+    .shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
+        max-width: 30px;
+    }
+    .navbar-brand img {
+        -webkit-transform: scale(0.6);
+    }
+}
+#start img {
+    max-height: 100vh;
+    margin: 0 auto;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.carousel-control {
+    z-index: 2;
 }
