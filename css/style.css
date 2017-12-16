@@ -126,7 +126,7 @@
     height: 10%;
 }
 
-.function-header{
+.function-header, .team-header{
     font-weight: 900;
     font-size: 3em;
     letter-spacing: 3px;
@@ -163,16 +163,22 @@
 }
 
 .team-section {
-    padding-top: 5em;
     padding-bottom: 5em;
     background: #868686;
 }
 
 .members {
+    position: relative;
     border: 0.5em solid #FF8619;
     border-radius: 3em;
     margin: 1em auto;
     width: 250px;
+    z-index: 0;
+}
+
+.members:hover .members-picture{
+    transform: translateY(-10%) scale(0.7);
+    transition: 0.4s;
 }
 
 .members img {
@@ -180,10 +186,26 @@
     margin: 1em auto;
 }
 
+.members-picture {
+    transition: 0.4s;
+}
+
 .social-media {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    left: ;
+    z-index: 1;
+    visibility: hidden;
     font-size: 3em;
     text-transform: uppercase;
     font-weight: 800;
+}
+
+.members:hover .social-media {
+    visibility: visible;
+    transition-delay: 0.3s;
 }
 
 .signIn {
@@ -241,7 +263,7 @@ footer p {
     transform: translateY(-50%);
 }
 @media (max-width: 768px) {
-    .function-header{
+    .function-header, .team-header{
         font-weight: 500;
         font-size: 1.6em;
         letter-spacing: 2px;
