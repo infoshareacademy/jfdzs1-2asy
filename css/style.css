@@ -301,3 +301,19 @@ footer p {
 .carousel-control {
     z-index: 2;
 }
+
+#cookie-alert {
+    height: 100px;
+    background-color: black;
+    font-size: 20px;
+    color: #ff8619;
+    padding: 15px 40px;
+}
+
+#cookie-button {
+    float: right;
+    border-radius: 7px;
+    padding: 10px 35px;
+    height: 50px;
+    margin-right: 100px;
+}
