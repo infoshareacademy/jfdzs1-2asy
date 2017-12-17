@@ -303,7 +303,7 @@ footer p {
 }
 
 #cookie-alert {
-    height: 100px;
+    height: 15%;
     background-color: black;
     font-size: 20px;
     color: #ff8619;
@@ -312,8 +312,10 @@ footer p {
 
 #cookie-button {
     float: right;
-    border-radius: 7px;
-    padding: 10px 35px;
+    border-radius: 20px;
+    padding: 10px 10px;
     height: 50px;
-    margin-right: 100px;
+    margin-right: 5%;
+    font-weight: 800;
+    margin-top: 5px;
 }
