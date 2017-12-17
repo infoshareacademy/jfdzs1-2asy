@@ -176,10 +176,10 @@
     z-index: 0;
 }
 
-.members:hover .members-picture{
-    transform: translateY(-10%) scale(0.7);
-    transition: 0.4s;
-}
+/*.members:hover .members-picture{*/
+    /*transform: translateY(-10%) scale(0.7);*/
+    /*transition: 0.4s;*/
+/*}*/
 
 .members img {
     max-height: 200px;
@@ -212,10 +212,10 @@
     color: #0077B5;
 }
 
-.members:hover .social-media {
-    visibility: visible;
-    transition-delay: 0.3s;
-}
+/*.members:hover .social-media {*/
+    /*visibility: visible;*/
+    /*transition-delay: 0.3s;*/
+/*}*/
 
 .signIn {
     margin-top:8em;
