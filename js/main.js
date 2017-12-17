@@ -4,18 +4,14 @@ members.forEach(function (value) {
     value.addEventListener('mouseenter', function (e) {
         let member = e.target;
         member.querySelector('.members-picture').style.transform = 'translateY(-10%) scale(0.7)';
-        // console.log(member.querySelector('.members-picture'));
+        member.querySelector('.members-picture').style.transition = '0.4s';
+        member.querySelector('.social-media').style.visibility = 'visible';
+        member.querySelector('.social-media').style.transitionDelay = '0.3s';
     });
-
+    value.addEventListener('mouseover', function (e) {
+        let member = e.target;
+        member.querySelector('.members-picture').style.transform = 'translateY(0) scale(1)';
+        member.querySelector('.social-media').style.visibility = 'hidden';
+        member.querySelector('.social-media').style.transitionDelay = '0s';
+    });
 });
-
-
-console.log(members);
-
-
-// members.addEventListener('mouseover', function () {
-//     querySelector('.social-media').style.visibility = 'visible';
-//     querySelector('.social-media').style.transition-delay = '0.3s';
-// });
-
-
