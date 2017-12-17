@@ -190,7 +190,15 @@
     transition: 0.4s;
 }
 
+.member-description{
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
 .social-media {
+    font-size: 3em;
+    color: inherit;
     position: absolute;
     width: 100%;
     padding: 10px;
@@ -198,9 +206,10 @@
     left: ;
     z-index: 1;
     visibility: hidden;
-    font-size: 3em;
-    text-transform: uppercase;
-    font-weight: 800;
+}
+
+.fa{
+    color: #0077B5;
 }
 
 .members:hover .social-media {
