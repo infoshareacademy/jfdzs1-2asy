@@ -9,7 +9,26 @@
         <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="Shortcut icon" href="images/popcorn.png">
-
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+        <script>
+            window.addEventListener("load", function(){
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#000"
+                        },
+                        "button": {
+                            "background": "#ff8619"
+                        }
+                    },
+                    "content": {
+                        "message": "Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu.",
+                        "dismiss": "Rozumiem",
+                        "link": "Dowiedz się więcej"
+                    }
+                })});
+        </script>
         <title>GitFilm</title>
     </head>
     <body>
