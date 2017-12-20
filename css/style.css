@@ -141,6 +141,7 @@
 }
 .feature-tile .img-circle{
     max-width: 250px;
+    height: 250px;
 }
 .feature-tile{
     max-width: 300px;
