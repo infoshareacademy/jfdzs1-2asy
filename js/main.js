@@ -15,3 +15,13 @@ members.forEach(function (value) {
         member.querySelector('.social-media').style.transitionDelay = '0s';
     });
 });
+
+$(document).ready(function(){
+    $('body').scrollspy({target: ".navbar", offset: 50});
+});
+
+$(window).scroll(function() {
+    $('.navbar-default').css({
+        background: 'black'
+    });
+});
