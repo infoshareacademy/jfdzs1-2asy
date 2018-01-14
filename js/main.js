@@ -8,8 +8,9 @@ members.forEach(function (value) {
         member.querySelector('.social-media').style.visibility = 'visible';
         member.querySelector('.social-media').style.transitionDelay = '0.3s';
     });
-    value.addEventListener('mouseover', function (e) {
+    value.addEventListener('mouseleave', function (e) {
         let member = e.target;
+// debugger;
         member.querySelector('.members-picture').style.transform = 'translateY(0) scale(1)';
         member.querySelector('.social-media').style.visibility = 'hidden';
         member.querySelector('.social-media').style.transitionDelay = '0s';
