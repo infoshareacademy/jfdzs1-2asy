@@ -10,7 +10,6 @@ members.forEach(function (value) {
     });
     value.addEventListener('mouseleave', function (e) {
         let member = e.target;
-// debugger;
         member.querySelector('.members-picture').style.transform = 'translateY(0) scale(1)';
         member.querySelector('.social-media').style.visibility = 'hidden';
         member.querySelector('.social-media').style.transitionDelay = '0s';
