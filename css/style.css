@@ -241,7 +241,7 @@
 .btn {
     background: #ff8619;
 }
-.sign-in-btn {
+.sign-in-btn, #cookie-button {
     margin-top: 1%;
     background-color: #ff8619;
     font-weight: bold;
@@ -250,7 +250,7 @@
     text-decoration: none;
     border: none;
 }
-.sign-in-btn:hover {
+.sign-in-btn:hover, #cookie-button:hover {
     background: #ff8619;
 }
 label {
@@ -347,3 +347,26 @@ footer p {
     width: 100%;
     height: 80vh;
 }
+
+#cookie-alert {
+    height: 80px;
+    background-color: black;
+    font-size: 17px;
+    color: #ff8619;
+    padding: 15px 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#cookie-button {
+    float: right;
+    padding: 7px 7px;
+    height: 40px;
+}
+
+/*#cookie-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+*/
