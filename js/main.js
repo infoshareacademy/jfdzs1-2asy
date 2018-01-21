@@ -30,3 +30,41 @@ $(document).scroll(function() {
         $('.navbar-default').removeClass("navbar-scroll");
     }
 });
+
+var signInButton = document.getElementById("signInBtn");
+
+function openGameSection() {
+    var signInSection = document.getElementById("signin"),
+        newElement = document.createElement("div"),
+        template;
+
+    newElement.classList.add("game-section");
+    newElement.setAttribute("id", "#gameDiv");
+
+
+    template = ''
+        + '<div id="game">'
+        +   '<h1>' + "WITAJ W GRZE ŁAPACZ POPCORNU" + '</h1>'
+        +   '<h2>' + "Instrukcja gry:" + '</h2>'
+        +   '<p>' + "Dostęp do gry użytkownik otrzymuje po zapisaniu się na newstletter serwisu GitFilm" + '</p>'
+        +   '<p>' + "Gra polega na łapaniu do kubełka spadającego popcornu" + '</p>'
+        +   '<p>' + "Każdy złapany popcorn to 1 punkt." + '</p>'
+        +   '<p>' + "Rozgrywka trwa 120 seksund" + '</p>'
+        +   '<p>' + "Oprócz popcornu spadają spalone ziarna kukurydzy" + '</p>'
+        +   '<p>' + "Złapanie spalonego ziarna skutkuje utratą zęba" + '</p>'
+        +   '<p>' + "Masz tylko trzy zęby" + '</p>'
+        +   '<p>' + "Utrata wszystkich zębów kończy rozgrywkę" + '</p>'
+        +   '<p>' + "Po  60 sekundach rozgrywki przechodzisz na lvl2" + '</p>'
+        +   '<p>' + "Ziarna przyspieszają pojawia się więcej spalonych ziaren" + '</p>'
+        +   '<p>' + "Użytkownik może w każdym momencie opuścić grę lub ją zrestartować" + '</p>'
+        +   '<p>' + "Gra konczy się przekazaniem graczowi uzyskanego wyniku oraz tabeli 10 najlepszych." + '</p>'
+        +   '<button class="main-button" id="gameStart">' + "zagraj" + '</button>'
+        +  '</div>';
+    newElement.innerHTML = template;
+    signInSection.appendChild(newElement);
+    document.location.href = "#game";
+}
+
+signInButton.addEventListener('click', function() {
+    openGameSection()
+});
