@@ -15,3 +15,18 @@ members.forEach(function (value) {
         member.querySelector('.social-media').style.transitionDelay = '0s';
     });
 });
+
+$(document).ready(function(){
+    $('body').scrollspy({target: ".navbar", offset: 50});
+});
+
+$(document).scroll(function() {
+
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop >= 10 ) {
+        $('.navbar-default').addClass("navbar-scroll");
+    }
+    else{
+        $('.navbar-default').removeClass("navbar-scroll");
+    }
+});

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-
 }
 
 .navbar-default{
@@ -11,9 +10,19 @@
     border: none;
     margin: 0;
     background: none;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
+}
+
+.navbar-scroll{
+    background-color: black;
+}
+
+.navbar-default .navbar-nav .active>a, .navbar-default .navbar-nav .active>a:hover{
+    color: #ff8619;
+    text-shadow: 0 0 1px #ff8619, 0 0 2px #ff8619, 0 0 3px #ff8619;
+    background-color: transparent;
 }
 
 .navbar-brand img {
