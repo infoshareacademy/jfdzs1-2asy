@@ -12,7 +12,11 @@
     background: none;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
+}
+
+.navbar-scroll{
+    background-color: black;
 }
 
 .navbar-default .navbar-nav .active>a, .navbar-default .navbar-nav .active>a:hover{

@@ -20,8 +20,13 @@ $(document).ready(function(){
     $('body').scrollspy({target: ".navbar", offset: 50});
 });
 
-$(window).scroll(function() {
-    $('.navbar-default').css({
-        background: 'black'
-    });
+$(document).scroll(function() {
+
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop >= 10 ) {
+        $('.navbar-default').addClass("navbar-scroll");
+    }
+    else{
+        $('.navbar-default').removeClass("navbar-scroll");
+    }
 });
