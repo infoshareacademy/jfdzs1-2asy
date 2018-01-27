@@ -58,7 +58,7 @@ function openGameSection() {
         +   '<p>' + "Ziarna przyspieszają pojawia się więcej spalonych ziaren" + '</p>'
         +   '<p>' + "Użytkownik może w każdym momencie opuścić grę lub ją zrestartować" + '</p>'
         +   '<p>' + "Gra konczy się przekazaniem graczowi uzyskanego wyniku oraz tabeli 10 najlepszych." + '</p>'
-        +   '<button class="main-button" id="gameStart">' + "zagraj" + '</button>'
+        +   '<button class="main-button" id="gameStart">' + "graj" + '</button>'
         +  '</div>';
     newElement.innerHTML = template;
     signInSection.appendChild(newElement);
@@ -68,3 +68,21 @@ function openGameSection() {
 signInButton.addEventListener('click', function() {
     openGameSection()
 });
+
+
+//--------------Scroll Button-------------------//
+window.onload = function() {
+    var toTop = document.getElementById("toTop");
+
+    window.onscroll = function() {
+        var scrollY = window.pageYOffset;
+
+        if(scrollY > 200) toTop.style.display = "block";
+        else toTop.style.display = "none";
+    };
+
+    toTop.onclick = function() {
+        window.scrollBy(0, -1 * window.pageYOffset);
+    }
+};
+//------------------------------------------------------//
