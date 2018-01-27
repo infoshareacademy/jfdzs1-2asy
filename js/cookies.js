@@ -6,7 +6,7 @@ document.onload = function () {
 
 function hideCookieInfo() {
     cookiePopup.setAttribute("style", "display: none");
-    document.cookie = "cookie = agreed";
+    document.cookie = "cookie === agreed";
 }
 
 function removeCookiePopup(){
