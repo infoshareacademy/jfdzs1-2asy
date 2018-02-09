@@ -1,25 +1,64 @@
-function fallingPopcorn() {
+function popcorn(speed, number) {
+    var $popcorn = $();
+    
+    for (var i = 0; i < number; ++i) {
+        var $popcornDiv = $('<div class="popcornDefault"></div>');
 
-    var $popcorn = $(),
-        popcorn = 2;
-
-    for (var i = 0; i < popcorn; ++i) {
-        var $popcornDiv = $('<div class="popcorn"></div>');
-        $popcornDiv .css({
+        $popcornDiv.css({
             'left': (Math.random() * $('#site').width()) + 'px',
-            'top': '50px'
         });
+
         $popcorn = $popcorn.add($popcornDiv);
     }
-    $('#popcornZone').prepend($popcorn);
+
+    $('#popcornZone').append($popcorn);
 
     $popcorn.animate({
-        top: $('#site').width() + "px",
-    }, Math.random() + 5000, function(){
+        top: $('#site').height() + 'px'
+    }, speed, 'linear', function(){
         $(this).remove();
-        if (--popcorn < 1) {
-            fallingPopcorn();
-        }
     });
 }
-fallingPopcorn();
+
+function popcornGenerator() {
+    var level = null;
+
+    function levelFirst() {
+        popcorn(1000, 1);
+        level = setInterval(function () {popcorn(1000, 1);}, 1000);
+    }
+
+    function levelSecond() {
+        popcorn(500, 1);
+        level = setInterval(function () {popcorn(500, 1);}, 500);
+    }
+
+    function levelThird() {
+        popcorn(200, 1);
+        level = setInterval(function () {popcorn(200, 1);}, 200);
+    }
+
+    function stop() {
+        console.log('stop');
+        clearInterval(level);
+    }
+
+    setTimeout(function () {
+        levelFirst();
+    }, 0);
+
+    setTimeout(function () {
+        stop();
+        levelSecond();
+    }, 10000);
+
+    setTimeout(function () {
+        stop();
+        levelThird();
+    }, 20000);
+}
+
+popcornGenerator();
+
+//
+// fallingPopcorn();
