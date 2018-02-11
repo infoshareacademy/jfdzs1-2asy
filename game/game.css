@@ -1,3 +1,32 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#game {
+    background: yellow;
+    width: 100%;
+    height: 100vh;
+    border: 20px solid black;
+}
+
+#gamePosition {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#player {
+    background-image: url("images/popcorn.png");
+    background-size: contain;
+    /*background: blue;*/
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
 .popcornDefault {
     top:50px;
     left:0;
@@ -6,15 +35,4 @@
     width:10px;
     height:10px;
     background:white;
-}
-
-body {
-    background-color:grey;
-}
-
-#site {
-    width:80%;
-    height:80vh;
-    margin:0 auto;
-    position:relative;
 }
