@@ -48,7 +48,7 @@ function openGameSection() {
         +   '<h2>' + "Instrukcja gry:" + '</h2>'
         +   '<p>' + "Dostęp do gry użytkownik otrzymuje po zapisaniu się na newstletter serwisu GitFilm" + '</p>'
         +   '<p>' + "Gra polega na łapaniu do kubełka spadającego popcornu" + '</p>'
-        +   '<p>' + "Każdy złapany popcorn to 1 punkt." + '</p>'
+        +   '<p>' + "Każdy złapany fallingPopcorn to 1 punkt." + '</p>'
         +   '<p>' + "Rozgrywka trwa 120 seksund" + '</p>'
         +   '<p>' + "Oprócz popcornu spadają spalone ziarna kukurydzy" + '</p>'
         +   '<p>' + "Złapanie spalonego ziarna skutkuje utratą zęba" + '</p>'
