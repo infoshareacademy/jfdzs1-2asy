@@ -37,3 +37,13 @@
     height:10px;
     background:white;
 }
+
+.popcornBurned {
+    top:50px;
+    left:0;
+    position:absolute;
+    z-index:1;
+    width:10px;
+    height:10px;
+    background:black;
+}

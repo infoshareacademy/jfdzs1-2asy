@@ -19,10 +19,10 @@ $gameArea.mousemove(function (event) {
     });
 });
 
-function popcornGenerator(speed, number) {
+function popcornGenerator(fallingTime, numberOfPopcorn) {
     var $popcorn = $();
     
-    for (var i = 0; i < number; ++i) {
+    for (var i = 0; i < numberOfPopcorn; ++i) {
         var $popcornDiv = $('<div class="popcornDefault"></div>');
 
         $popcornDiv.css({
@@ -36,47 +36,83 @@ function popcornGenerator(speed, number) {
 
     $popcorn.animate({
         top: $('#game').height() + 'px'
-    }, speed, 'linear', function(){
+    }, fallingTime, 'linear', function(){
+        $(this).remove();
+    });
+}
+
+function burnedPopcornGenerator() {
+    var burnedPopcorn = $(),
+        randomFallingTime = Math.floor(Math.random() * 2000),
+        randomNumberOfPopcorn = Math.floor(Math.random() * 7);
+
+    for (var i = 0; i < randomNumberOfPopcorn; ++i) {
+        var $burnedPopcornDiv = $('<div class="popcornBurned"></div>');
+
+        $burnedPopcornDiv.css({
+            'left': (Math.random() * $('#game').width()) + 'px'
+        });
+
+        burnedPopcorn = burnedPopcorn.add($burnedPopcornDiv);
+    }
+
+    $('#popcornZone').append(burnedPopcorn);
+
+    burnedPopcorn.animate({
+        top: $('#game').height() + 'px'
+    }, randomFallingTime, 'linear', function(){
         $(this).remove();
     });
 }
 
 function fallingPopcorn() {
-    var level = null;
+    var popcornInterval = null;
 
-    function levelFirst() {
-        popcornGenerator(2000, 1);
-        level = setInterval(function () {popcornGenerator(2000, 1);}, 2000);
+    function level(fallingTime, numberOfPopcorn, frequency) {
+        popcornGenerator(fallingTime, numberOfPopcorn);
+        popcornInterval = setInterval(function () {popcornGenerator(fallingTime, numberOfPopcorn);}, frequency);
     }
 
-    function levelSecond() {
-        popcornGenerator(1500, 1);
-        level = setInterval(function () {popcornGenerator(1500, 1);}, 1500);
-    }
+    function burned() {
+        var randomFrequency = Math.floor(Math.random() * 2000);
 
-    function levelThird() {
-        popcornGenerator(1000, 1);
-        level = setInterval(function () {popcornGenerator(1000, 1);}, 1000);
+        burnedPopcornGenerator();
+        setInterval(function () {burnedPopcornGenerator();}, randomFrequency);
     }
 
     function stop() {
-        console.log('stop');
-        clearInterval(level);
+        clearInterval(popcornInterval);
     }
 
+    //=======================
+    //FIRST LEVEL
+
     setTimeout(function () {
-        levelFirst();
+        level(2000, 1, 2000);
     }, 0);
 
-    setTimeout(function () {
-        stop();
-        levelSecond();
-    }, 10000);
+    //=======================
+    //SECOND LEVEL
 
     setTimeout(function () {
-        stop();
-        levelThird();
+        stop(popcornInterval);
+        level(1500, 1, 1000);
+    }, 10000);
+
+    //=======================
+    //THIRD LEVEL
+
+    setTimeout(function () {
+        stop(popcornInterval);
+        level(1000, 1, 500);
     }, 20000);
+
+    //=======================
+    //BURNED POPCORN
+
+    setTimeout(function () {
+        burned(1000, 2);
+    }, 1000)
 }
 
 function colisionDetector() {
@@ -84,17 +120,29 @@ function colisionDetector() {
         playerPositionRightCorner = $('#player').position().left + 90,
         playerPositionTop = $('#player').position().top;
 
-    $('.popcornDefault').each(function (index) {
+    $('.popcornDefault').each(function () {
         var $popcorn = $(this),
             popcornPositionCenter = $popcorn.position().left + 5,
             popcornPositionBottom = $popcorn.position().top - 10;
 
         if (playerPositionLeftCorner <= popcornPositionCenter && popcornPositionCenter <= playerPositionRightCorner && popcornPositionBottom > playerPositionTop) {
-            console.log('dupa')
-        } else {
-            console.log('nieeeeeeeeeeeee')
+
+            // tutaj kodujemy to co dzieje się po złapaniu popcornu
+            console.log('złapany')
         }
-    })
+    });
+
+    $('.popcornBurned').each(function () {
+        var $popcornBurned = $(this),
+            burnedPopcornPositionCenter = $popcornBurned.position().left + 5,
+            burnedPopcornPositionBottom = $popcornBurned.position().top - 10;
+
+        if (playerPositionLeftCorner <= burnedPopcornPositionCenter && burnedPopcornPositionCenter <= playerPositionRightCorner && burnedPopcornPositionBottom > playerPositionTop) {
+
+            // tutaj kodujemy co dzieje się po złapaniu spalonego popcornu
+            console.log('spalony')
+        }
+    });
 }
 
 function game() {
