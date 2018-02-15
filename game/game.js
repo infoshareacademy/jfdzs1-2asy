@@ -1,3 +1,23 @@
+function startGameCountdown() {
+    var $gameCount = $('#gameCount'),
+        timeleft = 3;
+
+    var downloadTimer = setInterval(function(){
+        timeleft--;
+        $gameCount.text(timeleft);
+
+        if(timeleft <= 0) {
+            clearInterval(downloadTimer);
+            $gameCount.text('START!!!');
+
+            setTimeout(function () {
+                $gameCount.remove();
+                game();
+            }, 1000);
+        }
+    },1000);
+}
+
 function bucketMove() {
     var $gameArea = $('#gameArea'),
         $player = $('#player'),
@@ -124,8 +144,8 @@ function colisionDetector() {
 
     $('.popcornDefault').each(function () {
         var $popcorn = $(this),
-            popcornPositionCenter = $popcorn.position().left + 5,
-            popcornPositionBottom = $popcorn.position().top - 10;
+            popcornPositionCenter = $popcorn.position().left + 25,
+            popcornPositionBottom = $popcorn.position().top - 50;
 
         if (playerPositionLeftCorner <= popcornPositionCenter && popcornPositionCenter <= playerPositionRightCorner && popcornPositionBottom > playerPositionTop) {
 
@@ -136,8 +156,8 @@ function colisionDetector() {
 
     $('.popcornBurned').each(function () {
         var $popcornBurned = $(this),
-            burnedPopcornPositionCenter = $popcornBurned.position().left + 5,
-            burnedPopcornPositionBottom = $popcornBurned.position().top - 10;
+            burnedPopcornPositionCenter = $popcornBurned.position().left + 15,
+            burnedPopcornPositionBottom = $popcornBurned.position().top - 30;
 
         if (playerPositionLeftCorner <= burnedPopcornPositionCenter && burnedPopcornPositionCenter <= playerPositionRightCorner && burnedPopcornPositionBottom > playerPositionTop) {
 
@@ -153,4 +173,4 @@ function game() {
     setInterval(colisionDetector, 50);
 }
 
-game();
+startGameCountdown();

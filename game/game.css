@@ -3,6 +3,20 @@
     box-sizing: border-box;
 }
 
+#gameCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10em;
+    font-family: sans-serif;
+    position: absolute;
+    background: #ff8619;
+    width: 100%;
+    height: 100vh;
+    color: #070400;
+    z-index: 3;
+}
+
 #game {
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,6 +31,7 @@
     width: 100%;
     height: 100vh;
     border: 20px solid black;
+    padding: 20px;
     position: absolute;
     top: 0;
     z-index: 2;
