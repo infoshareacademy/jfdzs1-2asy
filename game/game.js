@@ -1,23 +1,25 @@
-var $gameArea = $('#gameArea'),
-    $player = $('#player'),
-    gameWidth = $gameArea.width();
+function bucketMove() {
+    var $gameArea = $('#gameArea'),
+        $player = $('#player'),
+        gameWidth = $gameArea.width();
     // gameHeight = $gameArea.height();
 
-// $(window).resize(function () {
-//     gameWidth = $gameArea.width();
-//     gameHeight = $gameArea.height();
-// });
+    // $(window).resize(function () {
+    //     gameWidth = $gameArea.width();
+    //     gameHeight = $gameArea.height();
+    // });
 
-$player.css({
-    left: gameWidth / 2 - 50
-});
-
-$gameArea.mousemove(function (event) {
-    var mouseX = event.pageX;
     $player.css({
-        left: mouseX - 50
+        left: gameWidth / 2 - 50
     });
-});
+
+    $gameArea.mousemove(function (event) {
+        var mouseX = event.pageX;
+        $player.css({
+            left: mouseX - 50
+        });
+    });
+}
 
 function popcornGenerator(fallingTime, numberOfPopcorn) {
     var $popcorn = $();
@@ -26,16 +28,16 @@ function popcornGenerator(fallingTime, numberOfPopcorn) {
         var $popcornDiv = $('<div class="popcornDefault"></div>');
 
         $popcornDiv.css({
-            'left': (Math.random() * $('#game').width()) + 'px'
+            'left': Math.floor(Math.random() * $('#gameArea').width()) + 'px'
         });
 
         $popcorn = $popcorn.add($popcornDiv);
     }
 
-    $('#popcornZone').append($popcorn);
+    $('#gameArea').append($popcorn);
 
     $popcorn.animate({
-        top: $('#game').height() + 'px'
+        top: $('#gameArea').height() + 'px'
     }, fallingTime, 'linear', function(){
         $(this).remove();
     });
@@ -50,16 +52,16 @@ function burnedPopcornGenerator() {
         var $burnedPopcornDiv = $('<div class="popcornBurned"></div>');
 
         $burnedPopcornDiv.css({
-            'left': (Math.random() * $('#game').width()) + 'px'
+            'left': Math.floor(Math.random() * $('#gameArea').width()) + 'px'
         });
 
         burnedPopcorn = burnedPopcorn.add($burnedPopcornDiv);
     }
 
-    $('#popcornZone').append(burnedPopcorn);
+    $('#gameArea').append(burnedPopcorn);
 
     burnedPopcorn.animate({
-        top: $('#game').height() + 'px'
+        top: $('#gameArea').height() + 'px'
     }, randomFallingTime, 'linear', function(){
         $(this).remove();
     });
@@ -146,6 +148,7 @@ function colisionDetector() {
 }
 
 function game() {
+    bucketMove();
     fallingPopcorn();
     setInterval(colisionDetector, 50);
 }
