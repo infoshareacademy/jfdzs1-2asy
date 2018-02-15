@@ -145,12 +145,19 @@ function fallingPopcorn() {
     }, 1000)
 }
 
+function gameover() {
+    alert('koniec gry ziomuś');
+}
+
 function removeTooth() {
     var $tooth = $('.tooth');
 
     $tooth.each(function () {
+        console.log($tooth);
         $tooth.last().remove();
     });
+
+    if (!$tooth.length) {gameover()}
 }
 
 function colisionDetector() {
@@ -182,8 +189,6 @@ function colisionDetector() {
         // console.log('left: ' + $playerPositionLeftCorner + ' center: ' + $burnedPopcornPositionCenter + ' right: ' + $playerPositionRightCorner);
 
         if ($playerPositionLeftCorner <= $burnedPopcornPositionCenter && $burnedPopcornPositionCenter <= $playerPositionRightCorner && $burnedPopcornPositionBottom > $playerPositionTop) {
-            // tutaj kodujemy co dzieje się po złapaniu spalonego popcornu
-            console.log('spalony');
             $popcornBurned.remove();
             removeTooth();
         }
