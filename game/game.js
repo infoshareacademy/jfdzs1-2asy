@@ -194,8 +194,20 @@ function fallingPopcorn(action) {
 }
 
 function gameover() {
-    stopGame();
     // przegrana po utracie wszystkich zębów - plansza gameover
+    var $gameover = $('<div class="gameover">GAMEOVER</div>'),
+        $playagain = $('<div class="playagain">Zagraj jeszcze raz</div>');
+
+    stopGame();
+
+    $gameover.append($playagain);
+    $('#game').append($gameover);
+    $gameover.hide().fadeIn(3000);
+
+    $playagain.click(function () {
+        location.reload();
+    });
+
 }
 
 function removeTooth() {
@@ -206,7 +218,7 @@ function removeTooth() {
         $tooth.last().remove();
     });
 
-    if (!$tooth.length) {gameover()}
+    if ($tooth.length === 0) {gameover()}
 }
 
 function colisionDetector() {

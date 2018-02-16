@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 #gameCount {
@@ -8,7 +9,6 @@
     align-items: center;
     justify-content: center;
     font-size: 15em;
-    font-family: 'Lato', sans-serif;
     position: absolute;
     background: #ff8619;
     width: 100%;
@@ -95,7 +95,6 @@
 
 .score {
     display: block;
-    font-family: 'Lato', sans-serif;
     font-size: 5em;
     position: absolute;
     left: 50%;
@@ -104,7 +103,28 @@
 
 .timer {
     display: block;
-    font-family: 'Lato', sans-serif;
     font-size: 2em;
     margin-right: 10px;
+}
+
+.gameover {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 10em;
+    z-index: 5;
+}
+
+.playagain {
+    background: #5e5e5e;
+    border-radius: 5px;
+    font-size: 0.2em;
+    text-align: center;
+    width: 50%;
+    padding: 2%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
