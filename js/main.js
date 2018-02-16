@@ -43,7 +43,7 @@ function openGameSection() {
 
 
     template = ''
-        + '<div id="game">'
+        + '<div id="gameManual">'
         +   '<h1>' + "WITAJ W GRZE ŁAPACZ POPCORNU" + '</h1>'
         +   '<h2>' + "Instrukcja gry:" + '</h2>'
         +   '<p>' + "Dostęp do gry użytkownik otrzymuje po zapisaniu się na newstletter serwisu GitFilm" + '</p>'
@@ -62,12 +62,21 @@ function openGameSection() {
         +  '</div>';
     newElement.innerHTML = template;
     signInSection.appendChild(newElement);
-    document.location.href = "#game";
+    document.location.href = "#gameManual";
+    attachStartGameButtonListener();
 }
 
 signInButton.addEventListener('click', function() {
     openGameSection()
 });
+
+function attachStartGameButtonListener() {
+    var startGameButton = document.getElementById('gameStart');
+
+    startGameButton.addEventListener('click', function () {
+        document.location.href = "game/game.html";
+    })
+}
 
 
 //--------------Scroll Button-------------------//

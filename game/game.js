@@ -2,7 +2,8 @@ var popcornInterval = null,
     burnedInterval = null,
     level_1 = null,
     level_2 = null,
-    level_3 = null;
+    level_3 = null,
+    countdownTimer = null;
 
 function startGame() {
     var $gameCount = $('#gameCount'),
@@ -27,6 +28,7 @@ function startGame() {
 function stopGame() {
     // funkcja stopująca grę
     fallingPopcorn('stop');
+    clearInterval(countdownTimer);
 }
 
 function endOfGame() {
@@ -38,13 +40,13 @@ function timer() {
     var $timer = $('#timer'),
         timeleft = 120;
 
-    var countdownTimer = setInterval(function () {
+    countdownTimer = setInterval(function () {
         timeleft--;
         $timer.text(timeleft);
 
         if (timeleft < 0) {
             clearInterval(countdownTimer);
-            
+
             endOfGame();
         }
     }, 1000);
