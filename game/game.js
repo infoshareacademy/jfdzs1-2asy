@@ -1,3 +1,9 @@
+var popcornInterval = null,
+    burnedInterval = null,
+    level_1 = null,
+    level_2 = null,
+    level_3 = null;
+
 function startGame() {
     var $gameCount = $('#gameCount'),
         timeleft = 3;
@@ -14,6 +20,32 @@ function startGame() {
                 $gameCount.remove();
                 game();
             }, 1000);
+        }
+    }, 1000);
+}
+
+function stopGame() {
+    // funkcja stopująca grę
+    fallingPopcorn('stop');
+}
+
+function endOfGame() {
+    stopGame();
+//    koniec gry po upłynięciu założonego czasu - pojawienie się ekranu końcowego z wynikiem i listą top 10
+}
+
+function timer() {
+    var $timer = $('#timer'),
+        timeleft = 120;
+
+    var countdownTimer = setInterval(function () {
+        timeleft--;
+        $timer.text(timeleft);
+
+        if (timeleft < 0) {
+            clearInterval(countdownTimer);
+            
+            endOfGame();
         }
     }, 1000);
 }
@@ -91,8 +123,7 @@ function burnedPopcornGenerator() {
     });
 }
 
-function fallingPopcorn() {
-    var popcornInterval = null;
+function fallingPopcorn(action) {
 
     function level(fallingTime, numberOfPopcorn, frequency) {
         popcornGenerator(fallingTime, numberOfPopcorn);
@@ -105,48 +136,64 @@ function fallingPopcorn() {
         var randomFrequency = Math.floor(Math.random() * 1000 + 500);
 
         burnedPopcornGenerator();
-        setInterval(function () {
+        burnedInterval = setInterval(function () {
             burnedPopcornGenerator();
         }, randomFrequency);
     }
 
-    function stop() {
+    function stopPopcorn() {
         clearInterval(popcornInterval);
+        clearTimeout(level_1);
+        clearTimeout(level_2);
+        clearTimeout(level_3);
     }
 
-    //=======================
-    //FIRST LEVEL
+    function stopBurned() {
+        clearInterval(burnedInterval);
+    }
 
-    setTimeout(function () {
-        level(2000, 1, 2000);
-    }, 0);
+    switch (action) {
+        case 'stop':
+            stopPopcorn();
+            stopBurned();
+            break;
+        case 'start':
+            //=======================
+            //FIRST LEVEL
 
-    //=======================
-    //SECOND LEVEL
+            level_1 = setTimeout(function () {
+                level(2000, 1, 2000);
+            }, 0);
 
-    setTimeout(function () {
-        stop(popcornInterval);
-        level(1500, 1, 1000);
-    }, 10000);
+            //=======================
+            //SECOND LEVEL
 
-    //=======================
-    //THIRD LEVEL
+            level_2 = setTimeout(function () {
+                stopPopcorn();
+                level(1500, 1, 1000);
+            }, 10000);
 
-    setTimeout(function () {
-        stop(popcornInterval);
-        level(1000, 1, 500);
-    }, 20000);
+            //=======================
+            //THIRD LEVEL
 
-    //=======================
-    //BURNED POPCORN
+            level_3 = setTimeout(function () {
+                stopPopcorn();
+                level(1000, 1, 500);
+            }, 20000);
 
-    setTimeout(function () {
-        burned();
-    }, 1000)
+            //=======================
+            //BURNED POPCORN
+
+            setTimeout(function () {
+                burned();
+            }, 1000);
+            break;
+    }
 }
 
 function gameover() {
-    alert('koniec gry ziomuś');
+    stopGame();
+    // przegrana po utracie wszystkich zębów - plansza gameover
 }
 
 function removeTooth() {
@@ -196,7 +243,8 @@ function colisionDetector() {
 }
 
 function game() {
-    fallingPopcorn();
+    timer();
+    fallingPopcorn('start');
     bucketMove();
     setInterval(colisionDetector, 10);
 }
