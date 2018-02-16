@@ -3,7 +3,8 @@ var popcornInterval = null,
     level_1 = null,
     level_2 = null,
     level_3 = null,
-    countdownTimer = null;
+    countdownTimer = null,
+    score = 0;
 
 function startGame() {
     var $gameCount = $('#gameCount'),
@@ -173,7 +174,7 @@ function fallingPopcorn(action) {
             level_2 = setTimeout(function () {
                 stopPopcorn();
                 level(1500, 1, 1000);
-            }, 10000);
+            }, 40000);
 
             //=======================
             //THIRD LEVEL
@@ -181,7 +182,7 @@ function fallingPopcorn(action) {
             level_3 = setTimeout(function () {
                 stopPopcorn();
                 level(1000, 1, 500);
-            }, 20000);
+            }, 80000);
 
             //=======================
             //BURNED POPCORN
@@ -221,6 +222,13 @@ function removeTooth() {
     if ($tooth.length === 0) {gameover()}
 }
 
+function updateScore() {
+    var $score = $('#score');
+
+    score++;
+    $score.text(score);
+}
+
 function colisionDetector() {
     var $playerPositionLeftCorner = $('#player').position().left + 5,
         $playerPositionRightCorner = $('#player').position().left + 95,
@@ -234,8 +242,7 @@ function colisionDetector() {
         // console.log('left: ' + $playerPositionLeftCorner + ' center: ' + $popcornPositionCenter + ' right: ' + $playerPositionRightCorner);
 
         if ($playerPositionLeftCorner <= $popcornPositionCenter && $popcornPositionCenter <= $playerPositionRightCorner && $popcornPositionBottom > $playerPositionTop) {
-            // tutaj kodujemy to co dzieje się po złapaniu popcornu
-            console.log('złapany');
+            updateScore();
             $popcorn.remove();
         } else {
 
