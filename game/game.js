@@ -34,6 +34,7 @@ function stopGame() {
 
 function endOfGame() {
     stopGame();
+    alert(score);
 //    koniec gry po upłynięciu założonego czasu - pojawienie się ekranu końcowego z wynikiem i listą top 10
 }
 
