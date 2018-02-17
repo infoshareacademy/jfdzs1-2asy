@@ -163,9 +163,14 @@
 }
 
 .yourScore {
-    padding: 5%;
+    padding: 2%;
 }
 
 .result {
-    padding: 5% 0;
+    padding: 30% 0;
+    width: 100%;
+}
+
+.result span {
+    margin-left: 5%;
 }

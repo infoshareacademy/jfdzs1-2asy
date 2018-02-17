@@ -4,7 +4,8 @@ var popcornInterval = null,
     level_2 = null,
     level_3 = null,
     countdownTimer = null,
-    score = 0;
+    score = 0,
+    topTen = [12, 33, 55, 555, 666];
 
 function startGame() {
     var $gameCount = $('#gameCount'),
@@ -34,14 +35,34 @@ function stopGame() {
 
 function endOfGame() {
     stopGame();
+    topTenUpdate(score);
+//    koniec gry po upłynięciu założonego czasu - pojawienie się ekranu końcowego z wynikiem i listą top 10
+}
 
+function topTenUpdate(score) {
     var $yourScore = $('#yourScore'),
-        $statics = $('.statics');
+        $statics = $('.statics'),
+        $topTenList = $('#topTenList'),
+        newElement = document.createElement("div"),
+        positionTemplate;
+
+    function template(index, value) {
+        positionTemplate = ''
+            + '<div class="result"><span>' + (index + 1) + '.' + '</span><span>' + value + '</span></div>';
+
+        newElement.innerHTML = positionTemplate;
+        $topTenList.append(positionTemplate);
+    }
 
     $statics.addClass('staticActive');
     $yourScore.text(score);
 
-//    koniec gry po upłynięciu założonego czasu - pojawienie się ekranu końcowego z wynikiem i listą top 10
+    topTen.push(score);
+    topTen.sort(function(a, b){return b-a});
+
+    topTen.map(function (value, index) {
+        template(index, value);
+    })
 }
 
 function timer() {
@@ -242,13 +263,11 @@ function colisionDetector() {
             $popcornPositionCenter = $popcorn.position().left + 25,
             $popcornPositionBottom = $popcorn.position().top + 15;
 
-        console.log('left: ' + $playerPositionLeftCorner + ' center: ' + $popcornPositionCenter + ' right: ' + $playerPositionRightCorner);
+        // console.log('left: ' + $playerPositionLeftCorner + ' center: ' + $popcornPositionCenter + ' right: ' + $playerPositionRightCorner);
 
         if ($playerPositionLeftCorner - 70 <= $popcornPositionCenter && $popcornPositionCenter <= $playerPositionRightCorner - 70 && $popcornPositionBottom > $playerPositionTop) {
             updateScore();
             $popcorn.remove();
-        } else {
-
         }
     });
 
