@@ -59,15 +59,24 @@ function openGameSection() {
         +   '<p>' + "Użytkownik może w każdym momencie opuścić grę lub ją zrestartować" + '</p>'
         +   '<p>' + "Gra konczy się przekazaniem graczowi uzyskanego wyniku oraz tabeli 10 najlepszych." + '</p>'
         +   '<button class="main-button" id="gameStart">' + "graj" + '</button>'
-        +  '</div>';
+        +   '<div id="myModal" class="modal">'
+        +       '<div id="modalContent" class="modal-content">'
+        +       '<span class ="modalClose">' + "&times;" + '</span>'
+        +       '<h2>'+"Witaj w Grze Łapacz Popcornu"+'</h2>'
+        +'  <div class="shake-chunk shake-constant"><img src="images/popcorn.png" class="img-responsive"></div>'
+        +       '</div>'
+        +   '</div>'
+        + '</div>';
     newElement.innerHTML = template;
     signInSection.appendChild(newElement);
     document.location.href = "#gameManual";
     attachStartGameButtonListener();
 }
 
+
 signInButton.addEventListener('click', function() {
     openGameSection()
+
 });
 
 function attachStartGameButtonListener() {
