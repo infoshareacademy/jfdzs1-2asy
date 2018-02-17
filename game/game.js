@@ -34,13 +34,19 @@ function stopGame() {
 
 function endOfGame() {
     stopGame();
-    alert(score);
+
+    var $yourScore = $('#yourScore'),
+        $statics = $('.statics');
+
+    $statics.addClass('staticActive');
+    $yourScore.text(score);
+
 //    koniec gry po upłynięciu założonego czasu - pojawienie się ekranu końcowego z wynikiem i listą top 10
 }
 
 function timer() {
     var $timer = $('#timer'),
-        timeleft = 120;
+        timeleft = 5;
 
     countdownTimer = setInterval(function () {
         timeleft--;
@@ -197,7 +203,7 @@ function fallingPopcorn(action) {
 
 function gameover() {
     // przegrana po utracie wszystkich zębów - plansza gameover
-    var $gameover = $('<div class="gameover">GAMEOVER</div>'),
+    var $gameover = $('<div class="gameover">GAME OVER</div>'),
         $playagain = $('<div class="playagain">Zagraj jeszcze raz</div>');
 
     stopGame();
