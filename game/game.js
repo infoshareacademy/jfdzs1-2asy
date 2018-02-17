@@ -46,7 +46,7 @@ function endOfGame() {
 
 function timer() {
     var $timer = $('#timer'),
-        timeleft = 5;
+        timeleft = 120;
 
     countdownTimer = setInterval(function () {
         timeleft--;
@@ -90,9 +90,7 @@ function popcornGenerator(fallingTime, numberOfPopcorn) {
         var $popcornDiv = $('<div class="popcornDefault"></div>');
 
         $popcornDiv.css({
-            'left': 20 + Math.floor(Math.random() * ($('#gameArea').width() - 100)) + 'px'
-            // 'left': $('#gameArea').width() - 70 + 'px'
-            // 'left': 0 + 'px'
+            'left': -50 + Math.floor(Math.random() * ($('#gameArea').width() + 50)) + 'px'
         });
 
         $popcorn = $popcorn.add($popcornDiv);
@@ -116,9 +114,7 @@ function burnedPopcornGenerator() {
         var $burnedPopcornDiv = $('<div class="popcornBurned"></div>');
 
         $burnedPopcornDiv.css({
-            'left': 20 + Math.floor(Math.random() * ($('#gameArea').width() - 50)) + 'px'
-            // 'left': $('#gameArea').width() - 50 + 'px'
-            // 'left': 200 + 'px'
+            'left': -50 + Math.floor(Math.random() * ($('#gameArea').width() + 70)) + 'px'
         });
 
         burnedPopcorn = burnedPopcorn.add($burnedPopcornDiv);
@@ -246,9 +242,9 @@ function colisionDetector() {
             $popcornPositionCenter = $popcorn.position().left + 25,
             $popcornPositionBottom = $popcorn.position().top + 15;
 
-        // console.log('left: ' + $playerPositionLeftCorner + ' center: ' + $popcornPositionCenter + ' right: ' + $playerPositionRightCorner);
+        console.log('left: ' + $playerPositionLeftCorner + ' center: ' + $popcornPositionCenter + ' right: ' + $playerPositionRightCorner);
 
-        if ($playerPositionLeftCorner <= $popcornPositionCenter && $popcornPositionCenter <= $playerPositionRightCorner && $popcornPositionBottom > $playerPositionTop) {
+        if ($playerPositionLeftCorner - 70 <= $popcornPositionCenter && $popcornPositionCenter <= $playerPositionRightCorner - 70 && $popcornPositionBottom > $playerPositionTop) {
             updateScore();
             $popcorn.remove();
         } else {
@@ -263,7 +259,7 @@ function colisionDetector() {
 
         // console.log('left: ' + $playerPositionLeftCorner + ' center: ' + $burnedPopcornPositionCenter + ' right: ' + $playerPositionRightCorner);
 
-        if ($playerPositionLeftCorner <= $burnedPopcornPositionCenter && $burnedPopcornPositionCenter <= $playerPositionRightCorner && $burnedPopcornPositionBottom > $playerPositionTop) {
+        if ($playerPositionLeftCorner - 70 <= $burnedPopcornPositionCenter && $burnedPopcornPositionCenter <= $playerPositionRightCorner - 70 && $burnedPopcornPositionBottom > $playerPositionTop) {
             $popcornBurned.remove();
             removeTooth();
         }
