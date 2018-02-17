@@ -34,8 +34,14 @@ function stopGame() {
 }
 
 function endOfGame() {
+    var $staticsPlayagain = $('.staticsPlayagain');
+
     stopGame();
     topTenUpdate(score);
+
+    $staticsPlayagain.click(function () {
+        location.reload();
+    });
 //    koniec gry po upłynięciu założonego czasu - pojawienie się ekranu końcowego z wynikiem i listą top 10
 }
 
@@ -67,7 +73,7 @@ function topTenUpdate(score) {
 
 function timer() {
     var $timer = $('#timer'),
-        timeleft = 120;
+        timeleft = 10;
 
     countdownTimer = setInterval(function () {
         timeleft--;
