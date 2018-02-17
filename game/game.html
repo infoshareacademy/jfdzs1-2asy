@@ -34,6 +34,20 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
 </script>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDAvu485jpWt1wVX9-GJ1a-z6THg_GbT5Y",
+        authDomain: "popcorn-catcher.firebaseapp.com",
+        databaseURL: "https://popcorn-catcher.firebaseio.com",
+        projectId: "popcorn-catcher",
+        storageBucket: "popcorn-catcher.appspot.com",
+        messagingSenderId: "534785591572"
+    };
+    firebase.initializeApp(config);
+</script>
 <script src="game.js"></script>
+
 </body>
 </html>

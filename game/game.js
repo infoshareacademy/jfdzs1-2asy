@@ -4,8 +4,32 @@ var popcornInterval = null,
     level_2 = null,
     level_3 = null,
     countdownTimer = null,
-    score = 0,
-    topTen = [12, 33, 55, 555, 666];
+    score = null,
+    topTen = [];
+
+function openResultData() {
+    var results = firebase.database().ref('results/');
+    results.on('value', function (data) {
+            data.forEach(function (data) {
+                var item = data.val().score;
+                topTen.push(item);
+            });
+            // console.log(topTen);
+            topTen.sort(function (a, b) {
+                return b - a
+            });
+            // console.log(topTen);
+            // return topTen;
+        }, function (error) {
+        console.log("Error: " + error.code);
+    });
+}
+
+function writeResultData(score) {
+    firebase.database().ref('results/' + score).set({
+        score: score
+    });
+}
 
 function startGame() {
     var $gameCount = $('#gameCount'),
@@ -37,7 +61,12 @@ function endOfGame() {
     var $staticsPlayagain = $('.staticsPlayagain');
 
     stopGame();
-    topTenUpdate(score);
+    console.log('1', topTen.val)
+    writeResultData(score);
+    console.log('2', topTen)
+    // setTimeout(function(){openResultData()}, 50);
+    console.log('3', topTen)
+    resultsUpdate(score);
 
     $staticsPlayagain.click(function () {
         location.reload();
@@ -45,35 +74,51 @@ function endOfGame() {
 //    koniec gry po upłynięciu założonego czasu - pojawienie się ekranu końcowego z wynikiem i listą top 10
 }
 
-function topTenUpdate(score) {
+function resultsUpdate(score) {
     var $yourScore = $('#yourScore'),
         $statics = $('.statics'),
         $topTenList = $('#topTenList'),
-        newElement = document.createElement("div"),
-        positionTemplate;
+        newElement = document.createElement("div");
 
-    function template(index, value) {
-        positionTemplate = ''
-            + '<div class="result"><span>' + (index + 1) + '.' + '</span><span>' + value + '</span></div>';
+    openResultData();
 
-        newElement.innerHTML = positionTemplate;
-        $topTenList.append(positionTemplate);
-    }
+    // results.on('value', function (data) {
+    //         data.forEach(function (data) {
+    //             var item = data.val().score;
+    //             topTen.push(item);
+    //         });
+    //         // console.log(topTen);
+    //         // topTen.sort(function (a, b) {
+    //         //     return b - a
+    //         // });
+    //         // console.log(topTen);
+    //         return topTen;
+    //     }
+    //     , function (error) {
+    //         console.log("Error: " + error.code);
+    //     });
 
     $statics.addClass('staticActive');
     $yourScore.text(score);
 
-    topTen.push(score);
-    topTen.sort(function(a, b){return b-a});
+    console.log(topTen)
 
     topTen.map(function (value, index) {
-        template(index, value);
+        console.log(value, index);
+        var positionTemplate = ''
+            + '<div class="result"><span>' + (index + 1) + '.' + '</span><span>' + value + '</span></div>';
+
+        console.log(positionTemplate);
+        console.log($topTenList);
+
+        newElement.innerHTML = positionTemplate;
+        $topTenList.append(positionTemplate);
     })
 }
 
 function timer() {
     var $timer = $('#timer'),
-        timeleft = 120;
+        timeleft = 1;
 
     countdownTimer = setInterval(function () {
         timeleft--;
@@ -245,11 +290,12 @@ function removeTooth() {
     var $tooth = $('.tooth');
 
     $tooth.each(function () {
-        console.log($tooth);
         $tooth.last().remove();
     });
 
-    if ($tooth.length === 0) {gameover()}
+    if ($tooth.length === 0) {
+        gameover()
+    }
 }
 
 function updateScore() {
