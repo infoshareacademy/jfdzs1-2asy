@@ -73,7 +73,7 @@ function topTenUpdate(score) {
 
 function timer() {
     var $timer = $('#timer'),
-        timeleft = 10;
+        timeleft = 120;
 
     countdownTimer = setInterval(function () {
         timeleft--;
