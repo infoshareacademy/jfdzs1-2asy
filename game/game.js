@@ -11,7 +11,9 @@ function openResultData() {
     var results = firebase.database().ref('results/');
     results.on('value', function (data) {
             data.forEach(function (data) {
-                var item = data.val().score;
+                var item = data.val();
+                item.key = data.key;
+
                 topTen.push(item);
             });
             // console.log(topTen);
@@ -19,7 +21,7 @@ function openResultData() {
                 return b - a
             });
             // console.log(topTen);
-            // return topTen;
+            return topTen;
         }, function (error) {
         console.log("Error: " + error.code);
     });
@@ -61,11 +63,7 @@ function endOfGame() {
     var $staticsPlayagain = $('.staticsPlayagain');
 
     stopGame();
-    console.log('1', topTen.val)
     writeResultData(score);
-    console.log('2', topTen)
-    // setTimeout(function(){openResultData()}, 50);
-    console.log('3', topTen)
     resultsUpdate(score);
 
     $staticsPlayagain.click(function () {
