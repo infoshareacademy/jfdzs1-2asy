@@ -9,21 +9,23 @@ var popcornInterval = null,
 
 function openResultData() {
     var results = firebase.database().ref('results/');
-    results.on('value', function (data) {
+    return new Promise(function (resolve, reject) {
+        results.on('value', function (data) {
             data.forEach(function (data) {
                 var item = data.val();
-                item.key = data.key;
 
                 topTen.push(item);
             });
-            // console.log(topTen);
+            console.log(topTen);
             topTen.sort(function (a, b) {
-                return b - a
+                return b.score - a.score
             });
-            // console.log(topTen);
-            return topTen;
+            console.log(topTen);
+            return resolve(topTen);
         }, function (error) {
-        console.log("Error: " + error.code);
+            console.log("Error: " + error.code);
+            return reject(error);
+        });
     });
 }
 
@@ -78,45 +80,26 @@ function resultsUpdate(score) {
         $topTenList = $('#topTenList'),
         newElement = document.createElement("div");
 
-    openResultData();
+    openResultData().then(function (topTen) {
+        topTen.map(function (value, index) {
+            console.log(value.score, index);
+            var positionTemplate = ''
+                + '<div class="result"><span>' + (index + 1) + '.' + '</span><span>' + value.score + '</span></div>';
 
-    // results.on('value', function (data) {
-    //         data.forEach(function (data) {
-    //             var item = data.val().score;
-    //             topTen.push(item);
-    //         });
-    //         // console.log(topTen);
-    //         // topTen.sort(function (a, b) {
-    //         //     return b - a
-    //         // });
-    //         // console.log(topTen);
-    //         return topTen;
-    //     }
-    //     , function (error) {
-    //         console.log("Error: " + error.code);
-    //     });
+            // console.log(positionTemplate);
+            // console.log($topTenList);
 
+            newElement.innerHTML = positionTemplate;
+            $topTenList.append(positionTemplate);
+        })
+    });
     $statics.addClass('staticActive');
     $yourScore.text(score);
-
-    console.log(topTen)
-
-    topTen.map(function (value, index) {
-        console.log(value, index);
-        var positionTemplate = ''
-            + '<div class="result"><span>' + (index + 1) + '.' + '</span><span>' + value + '</span></div>';
-
-        console.log(positionTemplate);
-        console.log($topTenList);
-
-        newElement.innerHTML = positionTemplate;
-        $topTenList.append(positionTemplate);
-    })
 }
 
 function timer() {
     var $timer = $('#timer'),
-        timeleft = 1;
+        timeleft = 120;
 
     countdownTimer = setInterval(function () {
         timeleft--;
